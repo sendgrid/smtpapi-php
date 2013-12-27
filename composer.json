@@ -1,0 +1,22 @@
+{
+  "name": "sendgrid/smtpapi",
+  "description": "Build SendGrid X-SMTPAPI headers in PHP.",
+  "version": "0.0.1",
+  "homepage": "http://github.com/sendgrid/smtpapi-php",
+  "license": "MIT",
+  "keywords": ["SendGrid", "sendgrid", "email", "send", "grid", "smtpapi", "smtp", "api", "xsmtp", "X-SMTP"],
+  "require": {
+    "php": ">=5.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "replace": {
+    "sendgrid/smtpapi-php": "*"
+  },
+  "type": "library",
+  "autoload": {
+    "psr-0": {"Smtpapi": "lib/"}
+  }
+}
+
