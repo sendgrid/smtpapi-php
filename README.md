@@ -40,7 +40,92 @@ This gives you back the stringified json formatted X-SMTPAPI header. Use this wi
 
 ```php
 $header    = new Smtpapi\Header();
-$header.toJsonString();
+$header->toJsonString();
+```
+
+### addTo
+
+```php
+$header    = new Smtpapi\Header();
+$header->addTo('you@youremail.com');
+$header->addTo('other@otheremail.com');
+```
+
+### addSubVal
+
+```php
+$header    = new Smtpapi\Header();
+$header->addSubVal('keep', array('secret')); // sub = {keep: ['secret']}
+header->addSubVal('other', array('one', 'two'));   // sub = {keep: ['secret'], other: ['one', 'two']}
+```
+
+### setSection
+
+```php
+$header    = new Smtpapi\Header();
+$header->setSection(array('-charge-' => 'This ship is useless.')); // section = {'-charge-': 'This ship is useless.'}
+```
+
+### addSection
+
+```php
+$header    = new Smtpapi\Header();
+$header->setSection('-charge-': 'This ship is useless.');
+$header->addSection('-bomber-', 'Only for sad vikings.');
+```
+
+### setUniqueArgs
+
+```php
+$header    = new Smtpapi\Header();
+$header->setUniqueArgs(array('cow' => 'chicken'));
+$header->setUniqueArgs(array('dad' => 'proud'));
+```
+
+### addUniqueArgs
+
+```php
+$header    = new Smtpapi\Header();
+$header->addUniqueArgs('cat', 'dogs');
+```
+
+### setFilterSetting
+
+```php
+$header    = new Smtpapi\Header();
+$filter = array( 
+  'footer' => array( 
+    'setting' => array( 
+      'enable' => 1,
+      "text/plain" => 'You can haz footers!'
+    )
+  )
+); 
+$header->setFilterSetting($filter);
+```
+
+### addFilterSetting
+
+```php
+$header    = new Smtpapi\Header();
+$header->addFilterSetting('footer', 'enable', 1);
+$header->addFilterSetting('footer', 'text/html', '<strong>boo</strong>');
+```
+
+### setCategory
+
+```php
+$header    = new Smtpapi\Header();
+$header->setCategory('tactics'); // category = ['tactics']
+$header->setCategory('snowball-fight'); // category = ['snowball-fight']
+```
+
+### addCategory
+
+```php
+$header    = new Smtpapi\Header();
+$header->addCategory('tactics'); // category = ['tactics']
+$header->addCategory('advanced'); // category = ['tactics', 'advanced']
 ```
 
 ## SendGrid SMTP Example
