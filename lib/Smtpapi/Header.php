@@ -55,12 +55,12 @@ class Header {
     return $this;
   }
 
-//  public function setSubstitutions($key_value_pairs) {
-//    $this->sub = $key_value_pairs;
-//    return $this;
-//  }
+  public function setSubstitutions($key_value_pairs) {
+    $this->sub = $key_value_pairs;
+    return $this;
+  }
 
-  public function addSubVal($from_value, array $to_values) {
+  public function addSubstitution($from_value, array $to_values) {
     $this->sub[$from_value] = $to_values;
     return $this;
   }

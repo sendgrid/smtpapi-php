@@ -20,10 +20,10 @@ class SmtpapiTest_Header extends PHPUnit_Framework_TestCase {
     $this->assertEquals('{"to":["addTo@mailinator.com"]}', $header->toJsonString());
   }
 
-  public function testAddSubVal() {
+  public function testAddSubstitution() {
     $header = new Smtpapi\Header();
 
-    $header->addSubVal('sub', array('val'));
+    $header->addSubstitution('sub', array('val'));
     $this->assertEquals('{"sub":{"sub":["val"]}}', $header->toJsonString());
   }
 
