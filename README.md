@@ -31,7 +31,7 @@ require 'vendor/autoload.php';
 ### Initializing
 
 ```php
-$header    = Smtpapi\Header();
+$header    = new Smtpapi\Header();
 ```
 
 ### toJsonString
@@ -39,7 +39,7 @@ $header    = Smtpapi\Header();
 This gives you back the stringified json formatted X-SMTPAPI header. Use this with your [smtp client](https://github.com/andris9/simplesmtp) of choice.
 
 ```php
-$header    = Smtpapi\Header();
+$header    = new Smtpapi\Header();
 $header.toJsonString();
 ```
 
