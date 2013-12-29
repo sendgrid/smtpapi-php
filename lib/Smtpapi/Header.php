@@ -156,7 +156,7 @@ class Header {
       return "{}";
     }
 
-    $json_string = json_encode($this->_getHeaders(), JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_SLASHES);
+    $json_string = json_encode($this->_getHeaders(), JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
     
     // unescape 5.3 PHP's escaping of forward slashes
     return str_replace('\\/', '/', $json_string);
