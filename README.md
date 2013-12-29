@@ -43,6 +43,37 @@ $header    = new Smtpapi\Header();
 $header.toJsonString();
 ```
 
+## SendGrid SMTP Example
+
+The following example builds the X-SMTPAPI headers and adds them to swiftmailer. [Swiftmailer](http://swiftmailer.org/) then sends the email through SendGrid. You can use this same code in your application or optionally you can use [sendgrid-php](http://github.com/sendgrid/sendgrid-php).
+
+```php
+$transport  = Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 587);
+$transport->setUsername("sendgrid_username");
+$transport->setPassword("sendgrid_password");
+
+$mailer     = Swift_Mailer::newInstance($transport);
+
+$message    = new Swift_Message();
+$message->setTo("bar@blurdybloop.com");
+$message->setFrom("foo@blurdybloop.com");
+$message->setSubject("Hello");
+$message->setBody("%how% are you doing?");
+
+$header           = new Smtpapi\Header();
+$header->addSubVal("%how%", array("Owl"));
+
+$message_headers  = $message->getHeaders();
+$message_headers->addTextHeader("x-smtpapi", $header->toJsonString());
+
+try {
+  $response = $mailer->send($message);
+  print_r($response);
+} catch(\Swift_TransportException $e) {
+  print_r('Bad username / password');
+}
+```
+
 ## Contributing
 
 1. Fork it
