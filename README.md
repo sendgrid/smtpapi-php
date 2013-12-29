@@ -51,19 +51,19 @@ $header->addTo('you@youremail.com');
 $header->addTo('other@otheremail.com');
 ```
 
-### addSubVal
+### addSubstitution
 
 ```php
 $header    = new Smtpapi\Header();
-$header->addSubVal('keep', array('secret')); // sub = {keep: ['secret']}
-header->addSubVal('other', array('one', 'two'));   // sub = {keep: ['secret'], other: ['one', 'two']}
+$header->addSubstitution('keep', array('secret')); // sub = {keep: ['secret']}
+header->addSubstitution('other', array('one', 'two'));   // sub = {keep: ['secret'], other: ['one', 'two']}
 ```
 
-### setSection
+### setSections
 
 ```php
 $header    = new Smtpapi\Header();
-$header->setSection(array('-charge-' => 'This ship is useless.')); // section = {'-charge-': 'This ship is useless.'}
+$header->setSections(array('-charge-' => 'This ship is useless.')); // section = {'-charge-': 'This ship is useless.'}
 ```
 
 ### addSection

@@ -65,7 +65,7 @@ class Header {
     return $this;
   }
 
-  public function setSection(array $key_value_pairs) {
+  public function setSections(array $key_value_pairs) {
     $this->section = $key_value_pairs;
     return $this;
   }

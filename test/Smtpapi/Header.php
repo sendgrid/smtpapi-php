@@ -57,10 +57,10 @@ class SmtpapiTest_Header extends PHPUnit_Framework_TestCase {
     $this->assertEquals('{"category":["addCategory","addCategory2"]}', $header->toJsonString());
   }
 
-  public function testSetSection() {
+  public function testSetSections() {
     $header = new Smtpapi\Header();
 
-    $header->setSection(array('set_section_key' => 'set_section_value'));
+    $header->setSections(array('set_section_key' => 'set_section_value'));
     $this->assertEquals('{"section":{"set_section_key":"set_section_value"}}', $header->toJsonString());
   }
 
