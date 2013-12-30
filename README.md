@@ -34,13 +34,13 @@ require 'vendor/autoload.php';
 $header    = new Smtpapi\Header();
 ```
 
-### toJsonString
+### jsonString
 
 This gives you back the stringified json formatted X-SMTPAPI header. Use this with your [smtp client](https://github.com/andris9/simplesmtp) of choice.
 
 ```php
 $header    = new Smtpapi\Header();
-$header->toJsonString();
+$header->jsonString();
 ```
 
 ### addTo
@@ -161,7 +161,7 @@ $header           = new Smtpapi\Header();
 $header->addSubstitution("%how%", array("Owl"));
 
 $message_headers  = $message->getHeaders();
-$message_headers->addTextHeader("x-smtpapi", $header->toJsonString());
+$message_headers->addTextHeader("x-smtpapi", $header->jsonString());
 
 try {
   $response = $mailer->send($message);

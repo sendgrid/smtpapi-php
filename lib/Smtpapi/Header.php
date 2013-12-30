@@ -102,7 +102,7 @@ class Header {
     return $data;
   }
 
-  public function toJsonString() {
+  public function jsonString() {
     if (count($this->toArray()) <= 0) {
       return "{}";
     }
