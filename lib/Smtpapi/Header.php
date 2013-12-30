@@ -17,11 +17,6 @@ class Header {
     return $this;
   }
 
-  public function setTo($email) {
-    $this->to = array($email);
-    return $this;
-  }
-
   public function setTos(array $emails) { 
     $this->to = $emails;
     return $this;
