@@ -51,6 +51,13 @@ $header->addTo('you@youremail.com');
 $header->addTo('other@otheremail.com');
 ```
 
+### setTos
+
+```php
+$header    = new Smtpapi\Header();
+$header->setTos(array('you@youremail.com', 'other@otheremail.com'));
+```
+
 ### addSubstitution
 
 ```php
@@ -59,19 +66,17 @@ $header->addSubstitution('keep', array('secret')); // sub = {keep: ['secret']}
 header->addSubstitution('other', array('one', 'two'));   // sub = {keep: ['secret'], other: ['one', 'two']}
 ```
 
-### setSections
+### setSubstitutions
 
 ```php
 $header    = new Smtpapi\Header();
-$header->setSections(array('-charge-' => 'This ship is useless.')); // section = {'-charge-': 'This ship is useless.'}
+$header->setSubstitutions(array('keep' => array('secret'))); // sub = {keep: ['secret']}
 ```
-
-### addSection
+### addUniqueArg
 
 ```php
 $header    = new Smtpapi\Header();
-$header->setSection('-charge-': 'This ship is useless.');
-$header->addSection('-bomber-', 'Only for sad vikings.');
+$header->addUniqueArg('cat', 'dogs');
 ```
 
 ### setUniqueArgs
@@ -82,14 +87,45 @@ $header->setUniqueArgs(array('cow' => 'chicken'));
 $header->setUniqueArgs(array('dad' => 'proud'));
 ```
 
-### addUniqueArgs
+### addCategory
 
 ```php
 $header    = new Smtpapi\Header();
-$header->addUniqueArgs('cat', 'dogs');
+$header->addCategory('tactics'); // category = ['tactics']
+$header->addCategory('advanced'); // category = ['tactics', 'advanced']
 ```
 
-### setFilterSetting
+### setCategories
+
+```php
+$header    = new Smtpapi\Header();
+$header->setCategories(array('tactics', 'advanced')); // category = ['tactics', 'advanced']
+```
+
+### addSection
+
+```php
+$header    = new Smtpapi\Header();
+$header->addSection('-charge-': 'This ship is useless.');
+$header->addSection('-bomber-', 'Only for sad vikings.');
+```
+
+### setSections
+
+```php
+$header    = new Smtpapi\Header();
+$header->setSections(array('-charge-' => 'This ship is useless.'));
+```
+
+### addFilter
+
+```php
+$header    = new Smtpapi\Header();
+$header->addFilter('footer', 'enable', 1);
+$header->addFilter('footer', 'text/html', '<strong>boo</strong>');
+```
+
+### setFilters
 
 ```php
 $header    = new Smtpapi\Header();
@@ -101,31 +137,7 @@ $filter = array(
     )
   )
 ); 
-$header->setFilterSetting($filter);
-```
-
-### addFilterSetting
-
-```php
-$header    = new Smtpapi\Header();
-$header->addFilterSetting('footer', 'enable', 1);
-$header->addFilterSetting('footer', 'text/html', '<strong>boo</strong>');
-```
-
-### setCategory
-
-```php
-$header    = new Smtpapi\Header();
-$header->setCategory('tactics'); // category = ['tactics']
-$header->setCategory('snowball-fight'); // category = ['snowball-fight']
-```
-
-### addCategory
-
-```php
-$header    = new Smtpapi\Header();
-$header->addCategory('tactics'); // category = ['tactics']
-$header->addCategory('advanced'); // category = ['tactics', 'advanced']
+$header->setFilters($filter);
 ```
 
 ## SendGrid SMTP Example
@@ -140,13 +152,13 @@ $transport->setPassword("sendgrid_password");
 $mailer     = Swift_Mailer::newInstance($transport);
 
 $message    = new Swift_Message();
-$message->setTo("bar@blurdybloop.com");
+$message->setTos(array("bar@blurdybloop.com"));
 $message->setFrom("foo@blurdybloop.com");
 $message->setSubject("Hello");
 $message->setBody("%how% are you doing?");
 
 $header           = new Smtpapi\Header();
-$header->addSubVal("%how%", array("Owl"));
+$header->addSubstitution("%how%", array("Owl"));
 
 $message_headers  = $message->getHeaders();
 $message_headers->addTextHeader("x-smtpapi", $header->toJsonString());

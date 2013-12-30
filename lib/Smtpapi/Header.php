@@ -4,12 +4,11 @@ namespace Smtpapi;
 
 class Header {
   public $to           = array();
-  public $category     = array();
   public $sub          = array();
-  public $section      = array();
   public $unique_args  = array();
+  public $category     = array();
+  public $section      = array();
   public $filters      = array();
-  public $headers      = array();
 
   public function __construct() {}
 
@@ -28,30 +27,8 @@ class Header {
     return $this;
   }
 
-  public function removeTo($search_term) {
-    $this->to = array_values(array_filter($this->to, function($item) use($search_term) {
-      return !preg_match("/" . $search_term . "/", $item);
-    }));
-    return $this;
-  }
-
-  public function addCategory($category) {
-    $this->category[] = $category;
-    return $this;
-  }
-
-  public function setCategory($category) {
-    $this->category = array($category);
-    return $this;
-  }
-
-  public function setCategories($categories) {
-    $this->category = $categories;
-    return $this;
-  }
-
-  public function removeCategory($category) {
-    $this->_removeFromList($this->category, $category);
+  public function addSubstitution($from_value, array $to_values) {
+    $this->sub[$from_value] = $to_values;
     return $this;
   }
 
@@ -60,18 +37,8 @@ class Header {
     return $this;
   }
 
-  public function addSubstitution($from_value, array $to_values) {
-    $this->sub[$from_value] = $to_values;
-    return $this;
-  }
-
-  public function setSections(array $key_value_pairs) {
-    $this->section = $key_value_pairs;
-    return $this;
-  }
-  
-  public function addSection($from_value, $to_value) {
-    $this->section[$from_value] = $to_value;
+  public function addUniqueArg($key, $value) {
+    $this->unique_args[$key] = $value;
     return $this;
   }
 
@@ -79,84 +46,68 @@ class Header {
     $this->unique_args = $key_value_pairs;
     return $this;
   }
-    
-  public function addUniqueArgs($key, $value) {
-    $this->unique_args[$key] = $value;
+
+  public function addCategory($category) {
+    $this->category[] = $category;
     return $this;
   }
 
-  public function setFilterSetting($filter_setting) {
+  public function setCategories($categories) {
+    $this->category = $categories;
+    return $this;
+  }
+
+  public function addSection($from_value, $to_value) {
+    $this->section[$from_value] = $to_value;
+    return $this;
+  }
+
+  public function setSections(array $key_value_pairs) {
+    $this->section = $key_value_pairs;
+    return $this;
+  }
+
+  public function addFilter($filter_name, $parameter_name, $parameter_value) {
+    $this->filters[$filter_name]['settings'][$parameter_name] = $parameter_value;
+    return $this;
+  }  
+
+  public function setFilters($filter_setting) {
     $this->filters = $filter_setting;
     return $this;
   }
   
-  public function addFilterSetting($filter_name, $parameter_name, $parameter_value) {
-    $this->filters[$filter_name]['settings'][$parameter_name] = $parameter_value;
-    return $this;
-  }  
-  
-  public function setHeaders($key_value_pairs) {
-    $this->headers = $key_value_pairs;
-    return $this;
-  }  
-  
-  public function addHeader($key, $value) {
-    $this->headers[$key] = $value;
-    return $this;
-  }
-
-  public function removeHeader($key) {
-    unset($this->headers[$key]);
-    return $this;
-  }
-
-  private function _getHeaders() {
-    $this->headers;
+  private function toArray() {
+    $data = array();
 
     if ($this->to) {
-      $this->headers["to"] = $this->to;
-    }
-    if ($this->category) {
-      $this->headers["category"] = $this->category;
+      $data["to"] = $this->to;
     }
     if ($this->sub) {
-      $this->headers["sub"] = $this->sub;
-    }
-    if ($this->section) {
-      $this->headers["section"] = $this->section;
+      $data["sub"] = $this->sub;
     }
     if ($this->unique_args) {
-      $this->headers["unique_args"] = $this->unique_args;
+      $data["unique_args"] = $this->unique_args;
+    }
+    if ($this->category) {
+      $data["category"] = $this->category;
+    }
+    if ($this->section) {
+      $data["section"] = $this->section;
     }
     if ($this->filters) {
-      $this->headers["filters"] = $this->filters;
+      $data["filters"] = $this->filters;
     }
   
-    return $this->headers;
-  }
-
-  private function _removeFromList(&$list, $item, $key_field = null) {
-    foreach ($list as $key => $val) {
-      if($key_field) {
-        if($val[$key_field] == $item) {
-          unset($list[$key]);
-        }
-      } else {
-        if ($val == $item) {
-          unset($list[$key]);
-        } 
-      }
-    }
-    //repack the indices
-    $list = array_values($list);
+    return $data;
   }
 
   public function toJsonString() {
-    if (count($this->_getHeaders()) <= 0) {
+    if (count($this->toArray()) <= 0) {
       return "{}";
     }
 
-    $json_string = json_encode($this->_getHeaders(), JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
+    $json_string = json_encode($this->toArray(), JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
     
     // unescape 5.3 PHP's escaping of forward slashes
     return str_replace('\\/', '/', $json_string);
