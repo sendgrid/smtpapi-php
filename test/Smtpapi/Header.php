@@ -20,7 +20,7 @@ class SmtpapiTest_Header extends PHPUnit_Framework_TestCase {
   public function testHasAToJsonStringMethod() {
     $header = new Smtpapi\Header();
 
-    $this->assertEquals($this->t['to_json_string'], $header->jsonString());
+    $this->assertEquals($this->t['json_string'], $header->jsonString());
   }
 
   public function testAddTo() {
