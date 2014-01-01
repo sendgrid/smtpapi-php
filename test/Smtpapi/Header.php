@@ -33,7 +33,7 @@ class SmtpapiTest_Header extends PHPUnit_Framework_TestCase {
   public function testSetTos() {
     $header = new Smtpapi\Header();
 
-    $header->setTos(array('addTo@mailinator.com'));
+    $header->setTos(array('setTos@mailinator.com'));
     $this->assertEquals($this->t['set_tos'], $header->jsonString());
   }
 
