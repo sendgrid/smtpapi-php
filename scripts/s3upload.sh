@@ -9,7 +9,7 @@ rm -rf vendor composer.lock
 composer install --no-dev
 printf "<?php\nrequire 'vendor/autoload.php';\nrequire 'lib/Smtpapi.php';\n?>" > smtpapi-php.php
 cd ..
-zip -r smptpapi-php.zip smptpapi-php -x \*.git\* \*composer.json\* \*scripts\* \*test\* \*.travis.yml\*
+zip -r smtpapi-php.zip smtpapi-php -x \*.git\* \*composer.json\* \*scripts\* \*test\* \*.travis.yml\*
 
 curl -X POST \
   -F "key=smtpapi-php/versions/smtpapi-php-$GIT_VERSION.zip" \
