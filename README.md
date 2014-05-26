@@ -26,6 +26,18 @@ Then at the top of your script require the autoloader:
 require 'vendor/autoload.php';                                         
 ``` 
 
+#### Alternative: Install from zip
+
+If you are not using Composer, simply download and install the **[latest packaged release of the library as a zip](https://sendgrid-open-source.s3.amazonaws.com/smtpapi-php/smtpapi-php.zip)**. 
+
+Then require the library from package:
+
+```php
+require("path/to/smtpapi-php/smtpapi-php.php");
+```
+
+Previous versions of the library can be found in the [version index](https://sendgrid-open-source.s3.amazonaws.com/index.html).
+
 ## Usage
 
 ### Initializing
