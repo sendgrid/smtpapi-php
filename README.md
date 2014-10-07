@@ -75,7 +75,7 @@ $header->setTos(array('you@youremail.com', 'other@otheremail.com'));
 ```php
 $header    = new Smtpapi\Header();
 $header->addSubstitution('keep', array('secret')); // sub = {keep: ['secret']}
-header->addSubstitution('other', array('one', 'two'));   // sub = {keep: ['secret'], other: ['one', 'two']}
+$header->addSubstitution('other', array('one', 'two'));   // sub = {keep: ['secret'], other: ['one', 'two']}
 ```
 
 ### setSubstitutions
