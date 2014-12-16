@@ -88,6 +88,42 @@ class SmtpapiTest_Header extends PHPUnit_Framework_TestCase {
     $header->addSection('set_section_key_2', 'set_section_value_2');
     $this->assertEquals($this->t['add_section'], $header->jsonString());
   }
+  
+  public function testAddSendAt() {
+    $header = new Smtpapi\Header();
+    
+    $header->setSendEachAt(array(1409348513,1409348514));
+    $header->setSendAt(1409348513);
+    $this->assertEquals($this->t['set_send_at'], $header->jsonString());
+  }
+  
+  public function testSendEachAt() {
+    $header = new Smtpapi\Header();
+    
+    $header->setSendAt(1409348513);
+    $header->setSendEachAt(array(1409348513, 1409348514, 1409348515));
+    $this->assertEquals($this->t['set_send_each_at'], $header->jsonString());
+  }
+  
+  public function testAddSendEachAt() {
+    $header = new Smtpapi\Header();
+    
+    $header->setSendAt(1409348513);
+    $header->addSendEachAt(1409348513);
+    $header->addSendEachAt(1409348514);
+    $header->addSendEachAt(1409348515);
+    $this->assertEquals($this->t['add_send_each_at'], $header->jsonString());
+  }
+  
+  public function testSetSendEachAtAndAddSendEachAt() {
+    $header = new Smtpapi\Header();
+    
+    $header->setSendAt(1409348513);
+    $header->setSendEachAt(array(1409348513));
+    $header->addSendEachAt(1409348514);
+    $header->addSendEachAt(1409348515);
+    $this->assertEquals($this->t['set_send_each_at'], $header->jsonString());
+  }
 
   public function testSetSections() {
     $header = new Smtpapi\Header();

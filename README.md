@@ -15,7 +15,7 @@ Add the following to your `composer.json` file.
 {  
   "minimum-stability" : "dev",
   "require": {
-    "sendgrid/smtpapi": "0.0.1"
+    "sendgrid/smtpapi": "0.0.2"
   }
 }
 ``` 
@@ -68,6 +68,29 @@ $header->addTo('other@otheremail.com');
 ```php
 $header    = new Smtpapi\Header();
 $header->setTos(array('you@youremail.com', 'other@otheremail.com'));
+```
+
+### setSendAt
+
+```php
+$header    = new Smtpapi\Header();
+$header->setSendAt(1409348513);
+```
+
+### setSendEachAt
+
+```php
+$header    = new Smtpapi\Header();
+$header->setSendEachAt(array(1409348513, 1409348514, 1409348515));
+```
+
+### addSendEachAt
+
+```php
+$header    = new Smtpapi\Header();
+$header->addSendEachAt(1409348513);
+$header->addSendEachAt(1409348514);
+$header->addSendEachAt(1409348515);
 ```
 
 ### addSubstitution
