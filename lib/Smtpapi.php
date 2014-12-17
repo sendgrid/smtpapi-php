@@ -1,7 +1,7 @@
 <?php
 
 class Smtpapi {
-  const VERSION = "0.0.2";
+  const VERSION = "0.1.0";
 
   public static function register_autoloader() {
     spl_autoload_register(array('Smtpapi', 'autoloader'));

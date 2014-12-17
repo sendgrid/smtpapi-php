@@ -9,6 +9,8 @@ class Header {
   public $category     = array();
   public $section      = array();
   public $filters      = array();
+  public $send_at      = null;
+  public $send_each_at = array();
 
   public function __construct() {}
 
@@ -19,6 +21,24 @@ class Header {
 
   public function setTos(array $emails) {
     $this->to = $emails;
+    return $this;
+  }
+  
+  public function setSendAt($send_at) {
+    $this->send_at = $send_at;
+    $this->send_each_at = array();
+    return $this;
+  }
+  
+  public function setSendEachAt(array $send_each_at) {
+    $this->send_each_at = $send_each_at;
+    $this->send_at = null;
+    return $this;
+  }
+  
+  public function addSendEachAt($send_at) {
+    $this->send_at = null;
+    $this->send_each_at[] = $send_at;
     return $this;
   }
 
@@ -93,7 +113,13 @@ class Header {
     if ($this->filters) {
       $data["filters"] = $this->filters;
     }
-
+    if ($this->send_at) {
+      $data["send_at"] = $this->send_at;
+    }
+    if ($this->send_each_at) {
+      $data["send_each_at"] = $this->send_each_at;
+    }
+  
     return $data;
   }
 

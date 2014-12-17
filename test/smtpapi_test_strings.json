@@ -13,5 +13,8 @@
   "add_section": "{\"section\":{\"set_section_key\":\"set_section_value\",\"set_section_key_2\":\"set_section_value_2\"}}",
   "set_sections": "{\"section\":{\"set_section_key\":\"set_section_value\"}}",
   "add_filter": "{\"filters\":{\"footer\":{\"settings\":{\"text/html\":\"<strong>boo</strong>\"}}}}",
-  "set_filters": "{\"filters\":{\"footer\":{\"setting\":{\"enable\":1,\"text/plain\":\"You can haz footers!\"}}}}"
+  "set_filters": "{\"filters\":{\"footer\":{\"setting\":{\"enable\":1,\"text/plain\":\"You can haz footers!\"}}}}",
+  "set_send_at": "{\"send_at\":1409348513}",
+  "set_send_each_at": "{\"send_each_at\":[1409348513,1409348514,1409348515]}",
+  "add_send_each_at": "{\"send_each_at\":[1409348513,1409348514,1409348515]}"
 }
