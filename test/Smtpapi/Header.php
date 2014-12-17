@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 
 class SmtpapiTest_Header extends PHPUnit_Framework_TestCase {
-  
+
   protected $t;
 
   protected function setUp() {
@@ -74,6 +74,23 @@ class SmtpapiTest_Header extends PHPUnit_Framework_TestCase {
     $this->assertEquals($this->t['add_category'], $header->jsonString());
   }
 
+  public function testAddCategoryUnicode() {
+    $header = new Smtpapi\Header();
+
+    $header->addCategory('天破活殺');
+    $header->addCategory('天翔十字鳳');
+    $this->assertEquals($this->t['add_category_unicode'], $header->jsonString());
+  }
+
+  public function testAddCategoryUnicodeUnescape() {
+    $header = new Smtpapi\Header();
+
+    $header->addCategory('天破活殺');
+    $header->addCategory('天翔十字鳳');
+    $options = JSON_UNESCAPED_UNICODE;
+    $this->assertEquals($this->t['add_category_unicode_unescape'], $header->jsonString($options));
+  }
+
   public function testSetCategories() {
     $header = new Smtpapi\Header();
 
@@ -107,14 +124,14 @@ class SmtpapiTest_Header extends PHPUnit_Framework_TestCase {
   public function testSetFilters() {
     $header = new Smtpapi\Header();
 
-    $filter = array( 
-      'footer' => array( 
-        'setting' => array( 
+    $filter = array(
+      'footer' => array(
+        'setting' => array(
           'enable' => 1,
           "text/plain" => 'You can haz footers!'
         )
       )
-    ); 
+    );
 
     $header->setFilters($filter);
     $this->assertEquals($this->t['set_filters'], $header->jsonString());

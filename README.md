@@ -15,20 +15,20 @@ Add the following to your `composer.json` file.
 {  
   "minimum-stability" : "dev",
   "require": {
-    "sendgrid/smtpapi": "0.0.1"
+    "sendgrid/smtpapi": "0.0.2"
   }
 }
-``` 
+```
 
-Then at the top of your script require the autoloader:                 
- 
-```bash 
-require 'vendor/autoload.php';                                         
-``` 
+Then at the top of your script require the autoloader:
+
+```bash
+require 'vendor/autoload.php';
+```
 
 #### Alternative: Install from zip
 
-If you are not using Composer, simply download and install the **[latest packaged release of the library as a zip](https://sendgrid-open-source.s3.amazonaws.com/smtpapi-php/smtpapi-php.zip)**. 
+If you are not using Composer, simply download and install the **[latest packaged release of the library as a zip](https://sendgrid-open-source.s3.amazonaws.com/smtpapi-php/smtpapi-php.zip)**.
 
 Then require the library from package:
 
@@ -53,6 +53,13 @@ This gives you back the stringified json formatted X-SMTPAPI header. Use this wi
 ```php
 $header    = new Smtpapi\Header();
 $header->jsonString();
+```
+
+If you don't want to unicode escape, you can set options parameter for jsonString() (PHP 5.4 or later).
+
+```php
+$header    = new Smtpapi\Header();
+$header->jsonString(JSON_UNESCAPED_UNICODE);
 ```
 
 ### addTo
@@ -141,14 +148,14 @@ $header->addFilter('footer', 'text/html', '<strong>boo</strong>');
 
 ```php
 $header    = new Smtpapi\Header();
-$filter = array( 
-  'footer' => array( 
-    'setting' => array( 
+$filter = array(
+  'footer' => array(
+    'setting' => array(
       'enable' => 1,
       "text/plain" => 'You can haz footers!'
     )
   )
-); 
+);
 $header->setFilters($filter);
 ```
 
