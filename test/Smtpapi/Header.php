@@ -142,6 +142,13 @@ class SmtpapiTest_Header extends PHPUnit_Framework_TestCase {
     $this->assertEquals($this->t['set_send_each_at'], $header->jsonString());
   }
 
+  public function testSetASMGroupID() {
+    $header = new Smtpapi\Header();
+
+    $header->setASMGroupID(2);
+    $this->assertEquals($this->t['set_asm_group_id'], $header->jsonString());
+  }
+
   public function testSetSections() {
     $header = new Smtpapi\Header();
 

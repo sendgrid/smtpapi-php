@@ -11,6 +11,7 @@ class Header {
   public $filters      = array();
   public $send_at      = null;
   public $send_each_at = array();
+  public $asm_group_id = null;
 
   public function __construct() {}
 
@@ -92,6 +93,11 @@ class Header {
     return $this;
   }
 
+  public function setASMGroupID($group_id) {
+    $this->asm_group_id = $group_id;
+    return $this;
+  }
+
   private function toArray() {
     $data = array();
 
@@ -118,6 +124,9 @@ class Header {
     }
     if ($this->send_each_at) {
       $data["send_each_at"] = $this->send_each_at;
+    }
+    if ($this->asm_group_id) {
+      $data["asm_group_id"] = $this->asm_group_id;
     }
   
     return $data;
