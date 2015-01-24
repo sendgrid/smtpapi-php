@@ -15,7 +15,7 @@ Add the following to your `composer.json` file.
 {  
   "minimum-stability" : "dev",
   "require": {
-    "sendgrid/smtpapi": "0.0.2"
+    "sendgrid/smtpapi": "0.2.0"
   }
 }
 ```
@@ -157,6 +157,13 @@ $header->addSection('-bomber-', 'Only for sad vikings.');
 ```php
 $header    = new Smtpapi\Header();
 $header->setSections(array('-charge-' => 'This ship is useless.'));
+```
+
+### setASMGroupID
+
+```php
+$header    = new Smtpapi\Header();
+$header->setASMGroupID(42);
 ```
 
 ### addFilter
