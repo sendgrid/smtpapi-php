@@ -1,14 +1,14 @@
 <?php
 
 class Smtpapi {
-  const VERSION = "0.1.0";
+  const VERSION = '0.2.0';
 
   public static function register_autoloader() {
     spl_autoload_register(array('Smtpapi', 'autoloader'));
   }
 
   public static function autoloader($class) {
-    // Check that the class starts with "Smtpapi"
+    // Check that the class starts with 'Smtpapi'
     if ($class == 'Smtpapi' || stripos($class, 'Smtpapi\\') === 0) {
       $file = str_replace('\\', '/', $class);
 
