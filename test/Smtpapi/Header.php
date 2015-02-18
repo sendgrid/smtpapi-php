@@ -26,8 +26,16 @@ class SmtpapiTest_Header extends PHPUnit_Framework_TestCase {
   public function testAddTo() {
     $header = new Smtpapi\Header();
 
-    $header->addTo('addTo@mailinator.com');
+    $header->addTo('foo@example.com');
+    $header->addTo('bar@example.com');
     $this->assertEquals($this->t['add_to'], $header->jsonString());
+  }
+
+  public function testAddToWithName() {
+    $header = new Smtpapi\Header();
+
+    $header->addTo('foo@example.com', 'Mike Bar');
+    $this->assertEquals($this->t['add_to_name'], $header->jsonString());
   }
 
   public function testSetTos() {
