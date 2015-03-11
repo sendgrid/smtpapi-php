@@ -73,6 +73,11 @@ class Header {
     return $this;
   }
 
+  public function setCategory($category) {
+    $this->category = array($category);
+    return $this;
+  }
+
   public function addSection($from_value, $to_value) {
     $this->section[$from_value] = $to_value;
     return $this;
