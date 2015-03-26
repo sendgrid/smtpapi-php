@@ -12,19 +12,7 @@ cd ..
 zip -r smtpapi-php.zip smtpapi-php -x \*.git\* \*composer.json\* \*scripts\* \*test\* \*.travis.yml\*
 
 curl -X POST \
-  -F "key=smtpapi-php/versions/smtpapi-php-$GIT_VERSION.zip" \
-  -F "acl=public-read" \
-  -F "AWSAccessKeyId=$S3_ACCESS_KEY" \
-  -F "Policy=$S3_POLICY" \
-  -F "Signature=$S3_SIGNATURE" \
-  -F "Content-Type=application/zip" \
-  -F "file=@./smtpapi-php.zip" \
-  https://s3.amazonaws.com/$S3_BUCKET
-
-if [ "$TRAVIS_BRANCH" = "master" ]
-then 
-  curl -X POST \
-    -F "key=smtpapi-php/smtpapi-php.zip" \
+    -F "key=smtpapi-php/versions/smtpapi-php-$GIT_VERSION.zip" \
     -F "acl=public-read" \
     -F "AWSAccessKeyId=$S3_ACCESS_KEY" \
     -F "Policy=$S3_POLICY" \
@@ -32,6 +20,18 @@ then
     -F "Content-Type=application/zip" \
     -F "file=@./smtpapi-php.zip" \
     https://s3.amazonaws.com/$S3_BUCKET
+
+if [ "$TRAVIS_BRANCH" = "master" ]
+then
+    curl -X POST \
+        -F "key=smtpapi-php/smtpapi-php.zip" \
+        -F "acl=public-read" \
+        -F "AWSAccessKeyId=$S3_ACCESS_KEY" \
+        -F "Policy=$S3_POLICY" \
+        -F "Signature=$S3_SIGNATURE" \
+        -F "Content-Type=application/zip" \
+        -F "file=@./smtpapi-php.zip" \
+        https://s3.amazonaws.com/$S3_BUCKET
 fi
 
 exit 0
