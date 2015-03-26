@@ -15,7 +15,7 @@ Add the following to your `composer.json` file.
 {
     "minimum-stability" : "dev",
     "require": {
-        "sendgrid/smtpapi": "0.2.0"
+        "sendgrid/smtpapi": "0.3.0"
     }
 }
 ```
@@ -166,6 +166,13 @@ $header = new Smtpapi\Header();
 $header->setASMGroupID(42);
 ```
 
+## setIpPool
+
+```php
+$header = new Smtpapi\Header();
+$header->setIpPool('pool_name');
+```
+
 ### addFilter
 
 ```php
@@ -194,23 +201,25 @@ $header->setFilters($filter);
 The following example builds the X-SMTPAPI headers and adds them to swiftmailer. [Swiftmailer](http://swiftmailer.org/) then sends the email through SendGrid. You can use this same code in your application or optionally you can use [sendgrid-php](http://github.com/sendgrid/sendgrid-php).
 
 ```php
-$transport = Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 587);
+use Smtpapi\Header;
+
+$transport = \Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 587);
 $transport->setUsername('sendgrid_username');
 $transport->setPassword('sendgrid_password');
 
-$mailer = Swift_Mailer::newInstance($transport);
+$mailer = \Swift_Mailer::newInstance($transport);
 
-$message = new Swift_Message();
+$message = new \Swift_Message();
 $message->setTos(array('bar@blurdybloop.com'));
 $message->setFrom('foo@blurdybloop.com');
 $message->setSubject('Hello');
 $message->setBody('%how% are you doing?');
 
-$header = new Smtpapi\Header();
+$header = new Header();
 $header->addSubstitution('%how%', array('Owl'));
 
 $message_headers = $message->getHeaders();
-$message_headers->addTextHeader('x-smtpapi', $header->jsonString());
+$message_headers->addTextHeader(HEADER::NAME, $header->jsonString());
 
 try {
     $response = $mailer->send($message);

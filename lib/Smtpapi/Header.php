@@ -3,6 +3,8 @@ namespace Smtpapi;
 
 class Header
 {
+    const NAME = 'x-smtpapi';
+
     public $to = array();
     public $sub = array();
     public $unique_args = array();
@@ -12,6 +14,7 @@ class Header
     public $send_at = null;
     public $send_each_at = array();
     public $asm_group_id = null;
+    public $ipPool = null;
 
     /**
      * @param $email
@@ -198,6 +201,17 @@ class Header
     }
 
     /**
+     * @param string $name
+     * @return $this
+     */
+    public function setIpPool($name)
+    {
+        $this->ipPool = $name;
+
+        return $this;
+    }
+
+    /**
      * @return array
      */
     private function toArray()
@@ -231,6 +245,9 @@ class Header
         if ($this->asm_group_id) {
             $data['asm_group_id'] = $this->asm_group_id;
         }
+        if ($this->ipPool) {
+            $data['ip_pool'] = $this->ipPool;
+        }
 
         return $data;
     }
@@ -246,7 +263,7 @@ class Header
         }
 
         if (count($this->toArray()) <= 0) {
-            return "{}";
+            return '{}';
         }
 
         // unescape 5.3 PHP's escaping of forward slashes

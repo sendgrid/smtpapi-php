@@ -6,8 +6,8 @@ class SmtpapiTest_Header extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $string = file_get_contents(dirname(__FILE__) . '/../smtpapi_test_strings.json');
-        $json = json_decode($string, true);
+        $file = __DIR__ . '/../smtpapi_test_strings.json';
+        $json = json_decode(file_get_contents($file), true);
         $this->t = $json;
     }
 
@@ -200,12 +200,20 @@ class SmtpapiTest_Header extends \PHPUnit_Framework_TestCase
             'footer' => array(
                 'setting' => array(
                     'enable' => 1,
-                    "text/plain" => 'You can haz footers!'
+                    'text/plain' => 'You can haz footers!'
                 )
             )
         );
 
         $header->setFilters($filter);
         $this->assertEquals($this->t['set_filters'], $header->jsonString());
+    }
+
+    public function testSetIpPool()
+    {
+        $header = new Smtpapi\Header();
+
+        $header->setIpPool('foo');
+        $this->assertEquals($this->t['set_ip_pool'], $header->jsonString());
     }
 }
