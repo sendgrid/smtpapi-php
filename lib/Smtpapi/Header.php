@@ -13,10 +13,11 @@ class Header
     public $send_each_at = array();
     public $asm_group_id = null;
 
-    public function __construct()
-    {
-    }
-
+    /**
+     * @param $email
+     * @param string|null $name
+     * @return $this
+     */
     public function addTo($email, $name = null)
     {
         $this->to[] = $name ? sprintf('%s <%s>', $name, $email) : $email;
@@ -24,12 +25,20 @@ class Header
         return $this;
     }
 
+    /**
+     * @param array $emails
+     * @return $this
+     */
     public function setTos(array $emails)
     {
         $this->to = $emails;
         return $this;
     }
 
+    /**
+     * @param int $send_at
+     * @return $this
+     */
     public function setSendAt($send_at)
     {
         $this->send_at = $send_at;
@@ -38,6 +47,10 @@ class Header
         return $this;
     }
 
+    /**
+     * @param array $send_each_at
+     * @return $this
+     */
     public function setSendEachAt(array $send_each_at)
     {
         $this->send_each_at = $send_each_at;
@@ -46,6 +59,10 @@ class Header
         return $this;
     }
 
+    /**
+     * @param int $send_at
+     * @return $this
+     */
     public function addSendEachAt($send_at)
     {
         $this->send_at = null;
@@ -54,6 +71,11 @@ class Header
         return $this;
     }
 
+    /**
+     * @param string $from_value
+     * @param array $to_values
+     * @return $this
+     */
     public function addSubstitution($from_value, array $to_values)
     {
         $this->sub[$from_value] = $to_values;
@@ -61,13 +83,22 @@ class Header
         return $this;
     }
 
-    public function setSubstitutions($key_value_pairs)
+    /**
+     * @param array $key_value_pairs
+     * @return $this
+     */
+    public function setSubstitutions(array $key_value_pairs)
     {
         $this->sub = $key_value_pairs;
 
         return $this;
     }
 
+    /**
+     * @param mixed $key
+     * @param mixed $value
+     * @return $this
+     */
     public function addUniqueArg($key, $value)
     {
         $this->unique_args[$key] = $value;
@@ -75,6 +106,10 @@ class Header
         return $this;
     }
 
+    /**
+     * @param array $key_value_pairs
+     * @return $this
+     */
     public function setUniqueArgs(array $key_value_pairs)
     {
         $this->unique_args = $key_value_pairs;
@@ -82,6 +117,10 @@ class Header
         return $this;
     }
 
+    /**
+     * @param string $category
+     * @return $this
+     */
     public function addCategory($category)
     {
         $this->category[] = $category;
@@ -89,13 +128,22 @@ class Header
         return $this;
     }
 
-    public function setCategories($categories)
+    /**
+     * @param array $categories
+     * @return $this
+     */
+    public function setCategories(array $categories)
     {
         $this->category = $categories;
 
         return $this;
     }
 
+    /**
+     * @param string $from_value
+     * @param string $to_value
+     * @return $this
+     */
     public function addSection($from_value, $to_value)
     {
         $this->section[$from_value] = $to_value;
@@ -103,6 +151,10 @@ class Header
         return $this;
     }
 
+    /**
+     * @param array $key_value_pairs
+     * @return $this
+     */
     public function setSections(array $key_value_pairs)
     {
         $this->section = $key_value_pairs;
@@ -110,6 +162,12 @@ class Header
         return $this;
     }
 
+    /**
+     * @param string $filter_name
+     * @param string $parameter_name
+     * @param mixed $parameter_value
+     * @return $this
+     */
     public function addFilter($filter_name, $parameter_name, $parameter_value)
     {
         $this->filters[$filter_name]['settings'][$parameter_name] = $parameter_value;
@@ -117,13 +175,21 @@ class Header
         return $this;
     }
 
-    public function setFilters($filter_setting)
+    /**
+     * @param array $filter_setting
+     * @return $this
+     */
+    public function setFilters(array $filter_setting)
     {
         $this->filters = $filter_setting;
 
         return $this;
     }
 
+    /**
+     * @param string $group_id
+     * @return $this
+     */
     public function setASMGroupID($group_id)
     {
         $this->asm_group_id = $group_id;
@@ -131,6 +197,9 @@ class Header
         return $this;
     }
 
+    /**
+     * @return array
+     */
     private function toArray()
     {
         $data = array();
@@ -166,6 +235,10 @@ class Header
         return $data;
     }
 
+    /**
+     * @param null $options
+     * @return string
+     */
     public function jsonString($options = null)
     {
         if ($options === null) {
