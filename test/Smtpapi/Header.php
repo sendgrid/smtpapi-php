@@ -119,6 +119,14 @@ class SmtpapiTest_Header extends \PHPUnit_Framework_TestCase
         $this->assertEquals($this->t['set_categories'], $header->jsonString());
     }
 
+    public function testSetCategory()
+    {
+        $header = new Smtpapi\Header();
+
+        $header->setCategory('setCategory');
+        $this->assertEquals($this->t['set_category'], $header->jsonString());
+    }
+
     public function testAddSection()
     {
         $header = new Smtpapi\Header();
