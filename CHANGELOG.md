@@ -1,3 +1,11 @@
+v0.3.0 (2015-03-26)
+===================
+
+* Add IP Pool support
+* Normalize project file using PHP-FIG convention
+
+--
+
 v0.2.0 (2014-01-23)
 ===================
 
