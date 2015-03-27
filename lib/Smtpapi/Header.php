@@ -143,6 +143,16 @@ class Header
     }
 
     /**
+     * @param string $category
+     * @return $this
+     */
+    public function setCategory($category)
+    {
+        $this->category = array($category);
+        return $this;
+    }
+
+    /**
      * @param string $from_value
      * @param string $to_value
      * @return $this
