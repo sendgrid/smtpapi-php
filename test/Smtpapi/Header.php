@@ -42,6 +42,23 @@ class SmtpapiTest_Header extends \PHPUnit_Framework_TestCase
         $this->assertEquals($this->t['add_to_name'], $header->jsonString());
     }
 
+    public function testAddCc()
+    {
+        $header = new Smtpapi\Header();
+
+        $header->addCc('foo@example.com');
+        $header->addCc('bar@example.com');
+        $this->assertEquals($this->t['add_cc'], $header->jsonString());
+    }
+
+    public function testAddCcWithName()
+    {
+        $header = new Smtpapi\Header();
+
+        $header->addCc('foo@example.com', 'Mike Bar');
+        $this->assertEquals($this->t['add_cc_name'], $header->jsonString());
+    }
+
     public function testSetTos()
     {
         $header = new Smtpapi\Header();
