@@ -200,6 +200,14 @@ class Header
     }
 
     /**
+     * @return array filters
+     */
+    public function getFilters()
+    {
+        return $this->filters;
+    }
+
+    /**
      * @param string $group_id
      * @return $this
      */

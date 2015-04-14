@@ -217,6 +217,14 @@ class SmtpapiTest_Header extends \PHPUnit_Framework_TestCase
         $this->assertEquals($this->t['set_filters'], $header->jsonString());
     }
 
+    public function testGetFilters()
+    {
+        $header = new Smtpapi\Header();
+        $header->addFilter('footer', 'text/html', '<strong>boo</strong>');
+        $filter = array('footer' => array('settings' => array('text/html' => '<strong>boo</strong>')));
+        $this->assertEquals($filter, $header->getFilters());
+    }
+
     public function testSetIpPool()
     {
         $header = new Smtpapi\Header();
