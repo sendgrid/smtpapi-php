@@ -20,5 +20,6 @@
     "set_send_each_at": "{\"send_each_at\":[1409348513,1409348514,1409348515]}",
     "add_send_each_at": "{\"send_each_at\":[1409348513,1409348514,1409348515]}",
     "set_asm_group_id": "{\"asm_group_id\":2}",
+    "set_asm_groups_to_display": "{\"asm_groups_to_display\":[1,2,3]}",
     "set_ip_pool": "{\"ip_pool\":\"foo\"}"
 }
