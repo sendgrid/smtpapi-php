@@ -6,7 +6,7 @@
     "license": "MIT",
     "keywords": ["SendGrid", "sendgrid", "email", "send", "grid", "smtpapi", "smtp", "api", "xsmtp", "X-SMTP"],
     "require": {
-        "php": ">=5.3",
+        "php": ">=5.6",
         "swiftmailer/swiftmailer": "^5.4"
     },
     "require-dev": {
