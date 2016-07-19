@@ -11,6 +11,13 @@ All updates to this module is documented in our [CHANGELOG](https://github.com/s
 
 # Installation
 
+## Prerequisites
+
+- PHP version 5.6 or 7.0
+- The SendGrid service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-php)
+
+## Install with Composer
+
 The following recommended installation requires [http://getcomposer.org](composer).
 
 Add the following to your `composer.json` file.
@@ -30,7 +37,7 @@ Then at the top of your script require the autoloader:
 require 'vendor/autoload.php';
 ```
 
-#### Alternative: Install from zip
+## Alternative: Install from zip
 
 If you are not using Composer, simply download and install the **[latest packaged release of the library as a zip](https://sendgrid-open-source.s3.amazonaws.com/smtpapi-php/smtpapi-php.zip)**.
 
@@ -41,10 +48,6 @@ require('path/to/smtpapi-php/smtpapi-php.php');
 ```
 
 Previous versions of the library can be found in the [version index](https://sendgrid-open-source.s3.amazonaws.com/index.html).
-
-## Dependencies
-
-- The SendGrid Service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-php))
 
 # Quick Start
 
