@@ -14,6 +14,7 @@ class Header
     public $send_at = null;
     public $send_each_at = array();
     public $asm_group_id = null;
+    public $asm_groups_to_display = array();
     public $ipPool = null;
 
     /**
@@ -219,6 +220,17 @@ class Header
     }
 
     /**
+     * @param array $group_ids
+     * @return $this
+     */
+    public function setASMGroupsToDisplay(array $group_ids)
+    {
+        $this->asm_groups_to_display = $group_ids;
+
+        return $this;
+    }
+
+    /**
      * @param string $name
      * @return $this
      */
@@ -262,6 +274,9 @@ class Header
         }
         if ($this->asm_group_id) {
             $data['asm_group_id'] = $this->asm_group_id;
+        }
+        if ($this->asm_groups_to_display) {
+            $data['asm_groups_to_display'] = $this->asm_groups_to_display;
         }
         if ($this->ipPool) {
             $data['ip_pool'] = $this->ipPool;
