@@ -20,6 +20,8 @@ All updates to this module is documented in our [CHANGELOG](https://github.com/s
 
 The following recommended installation requires [http://getcomposer.org](composer).
 
+s;dflkjwlekrjwlkejrlwkjdgehiopmworinwgv
+
 Add the following to your `composer.json` file.
 
 ```json
