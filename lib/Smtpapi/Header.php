@@ -6,6 +6,7 @@ class Header
     const NAME = 'x-smtpapi';
 
     public $to = array();
+    public $cc = array();
     public $sub = array();
     public $unique_args = array();
     public $category = array();
@@ -35,6 +36,28 @@ class Header
     public function setTos(array $emails)
     {
         $this->to = $emails;
+        return $this;
+    }
+
+    /**
+     * @param $email
+     * @param string|null $name
+     * @return $this
+     */
+    public function addCc($email, $name = null)
+    {
+        $this->cc[] = $name ? sprintf('%s <%s>', $name, $email) : $email;
+
+        return $this;
+    }
+
+    /**
+     * @param array $emails
+     * @return $this
+     */
+    public function setCcs(array $emails)
+    {
+        $this->cc = $emails;
         return $this;
     }
 
@@ -238,6 +261,9 @@ class Header
 
         if ($this->to) {
             $data['to'] = $this->to;
+        }
+        if ($this->cc) {
+            $data['cc'] = $this->cc;
         }
         if ($this->sub) {
             $data['sub'] = $this->sub;
