@@ -24,9 +24,8 @@ Add the following to your `composer.json` file.
 
 ```json
 {
-    "minimum-stability" : "dev",
     "require": {
-        "sendgrid/smtpapi": "~0.5"
+        "sendgrid/smtpapi": "~0.5@dev"
     }
 }
 ```
