@@ -13,6 +13,7 @@ class Header
     public $filters = array();
     public $send_at = null;
     public $send_each_at = array();
+    public $batch_id = null;
     public $asm_group_id = null;
     public $ipPool = null;
 
@@ -70,6 +71,17 @@ class Header
     {
         $this->send_at = null;
         $this->send_each_at[] = $send_at;
+
+        return $this;
+    }
+
+    /**
+     * @param string $batch_id
+     * @return $this
+     */
+    public function addBatchId($batch_id)
+    {
+        $this->batch_id = $batch_id;
 
         return $this;
     }
@@ -256,6 +268,9 @@ class Header
         }
         if ($this->send_at) {
             $data['send_at'] = $this->send_at;
+        }
+        if ($this->batch_id) {
+            $data['batch_id'] = $this->batch_id;
         }
         if ($this->send_each_at) {
             $data['send_each_at'] = $this->send_each_at;
