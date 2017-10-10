@@ -64,7 +64,7 @@ print $header->jsonString();
 
 ## Roadmap
 
-If you are intersted in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-php/milestones). We would love to hear your feedback.
+If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-php/milestones). We would love to hear your feedback.
 
 ## How to Contribute
 
@@ -83,5 +83,4 @@ smtpapi-php is guided and supported by the SendGrid [Developer Experience Team](
 
 smtpapi-php is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-php are trademarks of SendGrid, Inc.
 
-![SendGrid Logo]
-(https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
+![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
