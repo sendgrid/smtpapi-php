@@ -241,3 +241,14 @@ This method requires a unix timestamp as the input.
 ```php
 $header->setSendAt(1508694645);
 ```
+
+<a name="batches"></a>
+## Batches
+
+Batches are a great way to group a collection of scheduled items for sending. It allows you to cancel scheduled emails, and provides more control over the emails.
+
+The batch ID can be set using the `Header::addBatchId()` method. You must have generated the batch ID first through the API.
+
+```php
+$header->addBatchId('HkJ5yLYULb7Rj8GKSx7u025ouWVlMgAi');
+```
