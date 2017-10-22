@@ -88,3 +88,30 @@ This method will remove any categories that have been previously set.
 
 ```php
 $header->setCategory('marketing');
+```
+
+<a name="substitution">Substitution</a>
+## Substitution
+
+Substitutions are a great way of writing short dynamic email content easily, 
+
+#### Adding a single substitution string
+
+The `Header::addSubstitution()` method can be used to replace content for recipients.
+
+```php
+$header->addSubstitution('-name-', ['John', 'Jane']);
+```
+
+#### Setting substitution strings
+
+The `Header::setSubstitutions()` method can be used to replace content for any number of strings.
+
+This method will reset any key pairs that have previously been set.
+
+```php
+$header->setSubstitutions([
+    '-name-' => ['John', 'Jane'],
+    '-number-' => ['555.555.5555', '777.777.7777'],
+);
+```
