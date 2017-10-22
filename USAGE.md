@@ -16,12 +16,13 @@ $header = new Smtpapi\Header();
 - [Substitution](#substitution)
 - [Sections](#sections)
 - [Filters](#filters)
+- [Advanced Suppression Manager (ASM)](#asm)
 - [Send At](#send-at)
 - [Batches](#batches)
 - [Groups](#groups)
 - [IPs](#ips)
 
-<a name="recipients">Recipients</a>
+<a name="recipients"></a>
 ## Recipients
 
 #### Adding a single recipient
@@ -48,7 +49,7 @@ $header->setTos([
 ]);
 ```
 
-<a name="categories">Categories</a>
+<a name="categories"></a>
 ## Categories
 
 Categories are a useful way to organise your email analytics by tagging your emails with a specific type or topic.
@@ -90,7 +91,7 @@ This method will remove any categories that have been previously set.
 $header->setCategory('marketing');
 ```
 
-<a name="substitution">Substitution</a>
+<a name="substitution"></a>
 ## Substitution
 
 Substitutions are a great way of writing short dynamic email content easily, 
@@ -116,7 +117,7 @@ $header->setSubstitutions([
 );
 ```
 
-<a name="sections">Sections</a>
+<a name="sections"></a>
 ## Sections
 
 Sections are similar to substitutions, but are specific to the actual message rather than the recipient.
@@ -146,7 +147,7 @@ $header->setSections([
 ]);
 ```
 
-<a name="filters">Filters</a>
+<a name="filters"></a>
 ## Filters
 
 Filters allow you to dynamically toggle features such as click tracking, blind copying and DKIM domain validation.
