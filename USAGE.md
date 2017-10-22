@@ -115,3 +115,33 @@ $header->setSubstitutions([
     '-number-' => ['555.555.5555', '777.777.7777'],
 );
 ```
+
+<a name="sections">Sections</a>
+## Sections
+
+Sections are similar to substitutions, but are specific to the actual message rather than the recipient.
+
+This is useful when you are sending multiple emails with the same style, but different content.
+
+#### Adding a section
+
+The `Header::addSection()` method can be used to add a new section to the sections array. This is useful for building up a list of sections dynamically, perhaps based on a user's actions.
+
+```php
+$header->addSection('-event_details-', 'The event will be held tomorrow.');
+```
+
+#### Setting multiple sections
+
+The `Header::setSections()` allows you to set multiple sections in a single array.
+
+This is good when sending out multiple emails where no dynamic variation is required.
+
+This will reset any section key-pairs that have previously been set.
+
+```php
+$header->setSections([
+    '-event_details-' => 'The event will be held tomorrow.',
+    '-event_open_time-' => 'It will be open from 1am to 9pm.',
+]);
+```
