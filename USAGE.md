@@ -29,11 +29,11 @@ $header = new Smtpapi\Header();
 
 The `Header::addTo()` method allows you to add a new recipient to the `$to` array.
 
-To do this, you can use the function with an email address, and optionally include the recipient's name.
+To do this, you can use the function with an email address, and optionally include the recipient's name as a second parameter.
 
 ```php
-$header->setTo('example@example.com');
-$header->setTo('example@example.com', 'An Example User');
+$header->setTo('example@example.com'); // An email address with no name provided
+$header->setTo('example@example.com', 'An Example User');  // An email address with a name provided as the second parameter
 ```
 
 #### Setting multiple recipients
@@ -44,8 +44,8 @@ This will set the `$to` array to the array you provide. This will need to either
 
 ```php
 $header->setTos([
-    'example@example.com',
-    'An Example User <example@example.com',
+    'example@example.com', // An email address with no name
+    'An Example User <example@example.com', // An email with a name field
 ]);
 ```
 
@@ -61,7 +61,7 @@ There are multiple methods available for setting your categories when sending em
 The `Header::addCategory()` method can be used to add a category to your list.
 
 ```php
-$header->addCategory('marketing');
+$header->addCategory('marketing'); // Add a new category of 'marketing' to the array of categories
 ```
 
 #### Setting multiple categories
@@ -76,7 +76,7 @@ This method will remove any categories that have been previously set.
 $header->setCategories([
     'marketing',
     'sales',
-);
+); // Sets the current categories to be 'marketing' and 'sales'
 ```
 
 #### Setting a single category
@@ -88,7 +88,7 @@ It is useful for removing previously set categories. And will create a new array
 This method will remove any categories that have been previously set.
 
 ```php
-$header->setCategory('marketing');
+$header->setCategory('marketing'); // Reset the categories to be 'marketing' only
 ```
 
 <a name="substitution"></a>
@@ -101,7 +101,7 @@ Substitutions are a great way of writing short dynamic email content easily,
 The `Header::addSubstitution()` method can be used to replace content for recipients.
 
 ```php
-$header->addSubstitution('-name-', ['John', 'Jane']);
+$header->addSubstitution('-name-', ['John', 'Jane']); // Replace the -name- variable with either John or Jane based on the recipient
 ```
 
 #### Setting substitution strings
@@ -112,8 +112,8 @@ This method will reset any key pairs that have previously been set.
 
 ```php
 $header->setSubstitutions([
-    '-name-' => ['John', 'Jane'],
-    '-number-' => ['555.555.5555', '777.777.7777'],
+    '-name-' => ['John', 'Jane'], // Replace the -name- variable to John or Jane
+    '-number-' => ['555.555.5555', '777.777.7777'], // Replace the -number- variable with the provided numbers
 );
 ```
 
@@ -124,12 +124,14 @@ Sections are similar to substitutions, but are specific to the actual message ra
 
 This is useful when you are sending multiple emails with the same style, but different content.
 
+Note that substitution variables can also be included within a section, but section variables cannot
+
 #### Adding a section
 
 The `Header::addSection()` method can be used to add a new section to the sections array. This is useful for building up a list of sections dynamically, perhaps based on a user's actions.
 
 ```php
-$header->addSection('-event_details-', 'The event will be held tomorrow.');
+$header->addSection('-event_details-', 'The event will be held tomorrow.'); // Replaces -event_details- with the event's string
 ```
 
 #### Setting multiple sections
@@ -201,7 +203,7 @@ The `Header::setASMGroupID()` method is a quick way to set the type of email tha
 All it requires is the ID of the ASM group, which can be found using the API.
 
 ```php
-$header->setASMGroupID(42);
+$header->setASMGroupID(42); // Sets the ASM ID to 42
 ```
 
 <a name="send-at"></a>
@@ -250,7 +252,7 @@ Batches are a great way to group a collection of scheduled items for sending. It
 The batch ID can be set using the `Header::addBatchId()` method. You must have generated the batch ID first through the API.
 
 ```php
-$header->addBatchId('HkJ5yLYULb7Rj8GKSx7u025ouWVlMgAi');
+$header->addBatchId('HkJ5yLYULb7Rj8GKSx7u025ouWVlMgAi'); // Adds a previously generated batch ID to the emails
 ```
 
 <a name="ip-pools"></a>
@@ -261,7 +263,7 @@ IP Pools allow you to group SendGrid IP addresses together. For example, if you 
 The IP Pool name can be set using the `Header::setIpPool()` method. You must have generated the IP Pool first through the API.
 
 ```php
-$header->setIpPool('marketing');
+$header->setIpPool('marketing'); // Sets the IP Pool to be the marketing collection of IPs
 ```
 
 
@@ -277,7 +279,21 @@ The `Header::toArray()` method allows the easy exporting of data from the header
 The output will be dynamically generated from the properties that have been set.
 
 ```php
-$headerArray = $header->toArray();
+$headerArray = $header->toArray(); // Returns the data as an array
+
+print_r($headerArray);
+
+// [
+//     'to' => 'example@example.com',
+//     'category' => [
+//          'marketing',
+//          'sales',
+//     ],
+//     'send_at' => 1508694645,
+//     'batch_id' => 'HkJ5yLYULb7Rj8GKSx7u025ouWVlMgAi',
+//     'asm_group_id' => 42,
+//     'ip_pool' => 'marketing',
+// ]
 ```
 
 #### Retrieving data as a JSON string
@@ -288,5 +304,22 @@ It has an optional variable that can be set to any flags that are available for 
 
 ```php
 $headerString = $header->jsonString();
-$headerString = $header->jsonString(JSON_PRETTY_PRINT | JSON_NUMERIC_CHECK);
+$headerStringPretty = $header->jsonString(JSON_PRETTY_PRINT);
+
+echo $headerString;
+echo $headerStringPretty;
+
+// {"to":"example@example.com","category":["marketing","sales"],"send_at":1508694645,"batch_id":"HkJ5yLYULb7Rj8GKSx7u025ouWVlMgAi","asm_group_id":"42","ip_pool":"marketing"}
+
+// {
+//   "to": "example@example.com",
+//   "category": [
+//     "marketing",
+//     "sales"
+//   ],
+//   "send_at": 1508694645,
+//   "batch_id": "HkJ5yLYULb7Rj8GKSx7u025ouWVlMgAi",
+//   "asm_group_id": "42",
+//   "ip_pool": "marketing"
+// }
 ```
