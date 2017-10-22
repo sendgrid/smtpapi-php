@@ -1,4 +1,5 @@
 ![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
+
 [![BuildStatus](https://api.travis-ci.org/sendgrid/smtpapi-php.png?branch=master)](https://travis-ci.org/sendgrid/smtpapi-php)
 [![Latest Stable Version](https://poser.pugx.org/sendgrid/smtpapi/version.png)](https://packagist.org/packages/sendgrid/smtpapi)
 [![Email Notifications Badge](https://dx.sendgrid.com/badge/php)](https://dx.sendgrid.com/newsletter/php)
@@ -9,10 +10,22 @@
 
 Learn more about the SMTP API at [SendGrid's documentation](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html).
 
+<a name="announcements"></a>
 # Announcements
 
 All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-php/blob/master/CHANGELOG.md).
 
+# Table of Contents
+
+* [Installation](#installation)
+* [Quick Start](#quick-start)
+* [Usage](#usage)
+* [Announcements](#announcements)
+* [Roadmap](#roadmap)
+* [How to Contribute](#how-to-contribute)
+* [About](#about)
+
+<a name="installation"></a>
 # Installation
 
 ## Prerequisites
@@ -52,6 +65,7 @@ require('path/to/smtpapi-php/smtpapi-php.php');
 
 Previous versions of the library can be found in the [version index](https://sendgrid-open-source.s3.amazonaws.com/index.html).
 
+<a name="quick-start"></a>
 # Quick Start
 
 ```php
@@ -61,15 +75,18 @@ $header->addTo('test2@example.com');
 print $header->jsonString();
 ```
 
+<a name="usage"></a>
 # Usage
 
 - [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
 - [Example Code](https://github.com/sendgrid/smtpapi-php/tree/master/examples)
 
+<a name="roadmap"></a>
 ## Roadmap
 
 If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-php/milestones). We would love to hear your feedback.
 
+<a name="how-to-contribute"></a>
 ## How to Contribute
 
 We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md) guide for details.
@@ -81,6 +98,7 @@ Quick links:
 - [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md#cla)
 - [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md#improvements_to_the_codebase)
 
+<a name="about"></a>
 # About
 
 smtpapi-php is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
