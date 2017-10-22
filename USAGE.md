@@ -263,3 +263,30 @@ The IP Pool name can be set using the `Header::setIpPool()` method. You must hav
 ```php
 $header->setIpPool('marketing');
 ```
+
+
+<a name="retrieving-data"></a>
+## Retrieving Data
+
+The `Header` class provides a couple of methods for retrieving the stored data.
+
+#### Retrieving data as an array
+
+The `Header::toArray()` method allows the easy exporting of data from the header instance as an array.
+
+The output will be dynamically generated from the properties that have been set.
+
+```php
+$headerArray = $header->toArray();
+```
+
+#### Retrieving data as a JSON string
+
+The `Header::jsonString()` method allows the data from the header instance to be exported as a JSON string.
+
+It has an optional variable that can be set to any flags that are available for [`json_encode()`](https://php.net/manual/function.json-encode.php#options).
+
+```php
+$headerString = $header->jsonString();
+$headerString = $header->jsonString(JSON_PRETTY_PRINT | JSON_NUMERIC_CHECK);
+```
