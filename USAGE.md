@@ -145,3 +145,43 @@ $header->setSections([
     '-event_open_time-' => 'It will be open from 1am to 9pm.',
 ]);
 ```
+
+<a name="filters">Filters</a>
+## Filters
+
+Filters allow you to dynamically toggle features such as click tracking, blind copying and DKIM domain validation.
+
+#### Adding a single filter
+
+Adding a filter is easy with the `Header::addFilter()` method.
+
+This method requires 3 values:
+- The filter's name
+- The parameter's name
+- The value
+
+```php
+$header->addFilter('dkim', 'use_from', true);
+$header->addFilter('dkim', 'domain', 'example.com');
+```
+
+#### Setting multiple filters
+
+Filters can also be added as an array of multiple filters using the `Header::setFilters()` method.
+
+```php
+$header->setFilters([
+    'bcc' => [
+        'settings' => [
+            'enable' => true,
+            'email' => 'you@example.com',
+        ],
+    ],
+    'dkim' => [
+        'settings' => [
+            'use_from' => true,
+            'domain' => 'example.com',
+        ],
+    ],
+]);
+```
