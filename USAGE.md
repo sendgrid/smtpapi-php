@@ -186,3 +186,20 @@ $header->setFilters([
     ],
 ]);
 ```
+
+<a name="asm"></a>
+## Advanced Suppression Management (ASM)
+
+Advanced Suppression Management (or Unsubscribe Groups) are a good way of allowing recipients to unsubscribe from a specific set of emails.
+
+You can 
+
+#### Setting the ASM group ID
+
+The `Header::setASMGroupID()` method is a quick way to set the type of email that you are sending.
+
+All it requires is the ID of the ASM group, which can be found using the API.
+
+```php
+$header->setASMGroupID(42);
+```
