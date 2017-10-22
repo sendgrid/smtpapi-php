@@ -203,3 +203,41 @@ All it requires is the ID of the ASM group, which can be found using the API.
 ```php
 $header->setASMGroupID(42);
 ```
+
+<a name="send-at"></a>
+## Send At
+
+Scheduling the time of your email campaign can be done using a collection of quick and easy methods.
+
+#### Adding a single 'send at' date
+
+The `Header::addSendEachAt()` method is a good way to add the time to send at.
+
+This method requires a unix timestamp as the input.
+
+```php
+$header->addSendEachAt(1508694645);
+```
+
+#### Setting multiple 'send at' date
+
+The `Header::setSendEachAt()` method is useful for setting an array of times that recipients have their emails sent.
+
+This method requires an array of unix timestamps as the input.
+
+```php
+$header->addSendEachAt([
+    1508694645,
+    1508694835,
+);
+```
+
+#### Setting a single date to send all emails
+
+The `Header::setSendAt()` method is useful for setting a single time that all emails in the collection will be sent.
+
+This method requires a unix timestamp as the input.
+
+```php
+$header->setSendAt(1508694645);
+```
