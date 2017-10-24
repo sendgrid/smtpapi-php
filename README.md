@@ -25,6 +25,7 @@ All updates to this module is documented in our [CHANGELOG](https://github.com/s
 * [Roadmap](#roadmap)
 * [How to Contribute](#how-to-contribute)
 * [About](#about)
+* [License](#license)
 
 <a name="installation"></a>
 # Installation
@@ -106,4 +107,6 @@ smtpapi-php is guided and supported by the SendGrid [Developer Experience Team](
 
 smtpapi-php is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-php are trademarks of SendGrid, Inc.
 
-![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
+<a name="license"></a>
+# License
+[The MIT License (MIT)](LICENSE.txt)
