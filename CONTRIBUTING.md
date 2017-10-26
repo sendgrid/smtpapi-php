@@ -85,12 +85,13 @@ echo "export SENDGRID_USERNAME='YOUR_SENDGRID_USERNAME" > sendgrid.env
 echo "export SENDGRID_PASSWORD='YOUR_SENDGRID_PASSWORD" >> sendgrid.env
 echo "sendgrid.env" >> .gitignore
 source ./sendgrid.env
+```
 
 ##### Execute: #####
 
 See the [examples folder](https://github.com/sendgrid/smtpapi-php/tree/master/examples) to get started quickly.
 
-<a name="understanding_the_codebase"></a>
+<a name="understanding-the-codebase"></a>
 ## Understanding the Code Base
 
 **/examples**
