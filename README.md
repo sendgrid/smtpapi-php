@@ -67,6 +67,24 @@ require('path/to/smtpapi-php/smtpapi-php.php');
 
 Previous versions of the library can be found in the [version index](https://sendgrid-open-source.s3.amazonaws.com/index.html).
 
+## Setup Environment Variables
+
+### Initial Setup
+
+```bash
+cp .env_sample .env
+```
+
+### Environment Variable
+
+Update the development environment with your [SENDGRID_API_KEY](https://app.sendgrid.com/settings/api_keys), for example:
+
+```bash
+echo "export SENDGRID_API_KEY='YOUR_API_KEY'" > sendgrid.env
+echo "sendgrid.env" >> .gitignore
+source ./sendgrid.env
+```
+
 <a name="quick-start"></a>
 # Quick Start
 
