@@ -45,7 +45,7 @@ This will set the `$to` array to the array you provide. This will need to either
 ```php
 $header->setTos([
     'example@example.com', // An email address with no name
-    'An Example User <example@example.com', // An email with a name field
+    'An Example User <example@example.com>', // An email with a name field
 ]);
 ```
 
