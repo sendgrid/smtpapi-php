@@ -8,6 +8,7 @@ Hello! Thank you for choosing to help contribute to one of the SendGrid open sou
 - [Understanding the Code Base](#understanding-the-codebase)
 - [Testing](#testing)
 - [Style Guidelines & Naming Conventions](#style-guidelines-and-naming-conventions)
+- [Code Reviews](#code-reviews)
 - [Creating a Pull Request](#creating-a-pull-request)
 
 <a name="roadmap"></a>
@@ -130,6 +131,10 @@ Generally, we follow the style guidelines as suggested by the official language.
 Please run your code through:
 
 - [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+
+<a name="code-reviews"></a>
+## Code Reviews
+If you can, please look at open PRs and review them. Give feedback and help us merge these PRs much faster! If you don't know how, Github has some great [information on how to review a Pull Request.](https://help.github.com/articles/about-pull-request-reviews/)
 
 <a name="creating-a-pull-request"></a>
 ## Creating a Pull Request
