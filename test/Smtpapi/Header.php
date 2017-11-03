@@ -232,4 +232,11 @@ class SmtpapiTest_Header extends \PHPUnit_Framework_TestCase
         $header->setIpPool('foo');
         $this->assertEquals($this->t['set_ip_pool'], $header->jsonString());
     }
+    
+    public function testLicenseDateRange()
+    {
+    	$license_file = file_get_contents("../../LICENSE.txt");
+    	$current_year = date("Y");
+    	$this->assertInternalType("int", strpos($license_file, "Copyright (c) 2013-" . $current_year . " SendGrid, Inc."));
+    }
 }
