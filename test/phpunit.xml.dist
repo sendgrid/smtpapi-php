@@ -4,6 +4,7 @@
     <testsuite name="General">
       <file>./smtpapi.php</file>
       <file>./smtpapi/Header.php</file>
+      <file>./RepoFilesExists.php</file>
     </testsuite>
   </testsuites>
 </phpunit>
