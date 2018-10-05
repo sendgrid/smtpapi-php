@@ -104,7 +104,7 @@ If you are interested in the future direction of this project, please take a loo
 <a name="how-to-contribute"></a>
 ## How to Contribute
 
-We encourage contribution to our project; please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md) guide for details.
+We encourage contribution to our projects; please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md) guide for details.
 
 Quick links:
 
