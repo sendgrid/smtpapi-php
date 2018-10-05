@@ -15,7 +15,7 @@ Learn more about the SMTP API at [SendGrid's documentation](https://sendgrid.com
 <a name="announcements"></a>
 # Announcements
 
-All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-php/blob/master/CHANGELOG.md).
+All updates to this module are documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-php/blob/master/CHANGELOG.md).
 
 # Table of Contents
 
@@ -104,7 +104,7 @@ If you are interested in the future direction of this project, please take a loo
 <a name="how-to-contribute"></a>
 ## How to Contribute
 
-We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md) guide for details.
+We encourage contribution to our project; please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md) guide for details.
 
 Quick links:
 
