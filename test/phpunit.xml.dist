@@ -6,7 +6,9 @@
       <file>./smtpapi/Header.php</file>
     </testsuite>
   </testsuites>
-  <whitelist>
-    <directory suffix=".php">/lib</directory>
-  </whitelist>
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">/lib</directory>
+    </whitelist>
+  </filter>
 </phpunit>
