@@ -305,7 +305,7 @@ class Header
      * 
      * @return array
      */
-    private function _toArray()
+    public function toArray()
     {
         $data = array();
 
@@ -359,14 +359,14 @@ class Header
             $options = JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP;
         }
 
-        if (count($this->_toArray()) <= 0) {
+        if (count($this->toArray()) <= 0) {
             return '{}';
         }
 
         // unescape 5.3 PHP's escaping of forward slashes
         return str_replace(
             '\\/', '/',
-            json_encode($this->_toArray(), $options)
+            json_encode($this->toArray(), $options)
         );
     }
 }
