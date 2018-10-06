@@ -3,7 +3,7 @@ before_script:
 - composer install --dev --no-interaction
 - cd test
 script:
-- ../vendor/bin/phpunit --coverage-clover clover.xml
+- ../vendor/bin/phpunit 
 after_script:
 - cd ..
 - ./scripts/s3upload.sh
