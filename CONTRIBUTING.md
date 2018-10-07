@@ -1,4 +1,4 @@
-Hello! Thank you for choosing to help contribute to one of the SendGrid open source libraries. There are many ways you can contribute and help is always welcome.  We simply ask that you follow the following contribution policies.
+Hello! Thank you for considering to help contribute to one of the SendGrid open source libraries. There are many ways you can contribute to our projects and additional help is always welcome. We simply require that you follow the following contribution policies.
 
 - [CLAs and CCLAs](#cla)
 - [Roadmap & Milestones](#roadmap)
@@ -18,7 +18,7 @@ We use [Milestones](https://github.com/sendgrid/smtpapi-php/milestones) to help 
 
 Before you get started, SendGrid requires that a SendGrid Contributor License Agreement (CLA) be filled out by every contributor to a SendGrid open source project.
 
-Our goal with the CLA is to clarify the rights of our contributors and reduce other risks arising from inappropriate contributions.  The CLA also clarifies the rights SendGrid holds in each contribution and helps to avoid misunderstandings over what rights each contributor is required to grant to SendGrid when making a contribution.  In this way the CLA encourages broad participation by our open source community and helps us build strong open source projects, free from any individual contributor withholding or revoking rights to any contribution.
+Our goal with the CLA is to clarify the rights of our contributors and reduce other risks arising from inappropriate contributions. The CLA also clarifies the rights SendGrid holds in each contribution and helps to avoid misunderstandings over what rights each contributor is required to grant to SendGrid when making a contribution.  In this way the CLA encourages broad participation by our open source community and helps us build strong open source projects, free from any individual contributor withholding or revoking rights to any contribution.
 
 SendGrid does not merge a pull request made against a SendGrid open source project until that pull request is associated with a signed CLA. Copies of the CLA are available [here](https://gist.github.com/SendGridDX/98b42c0a5d500058357b80278fde3be8#file-sendgrid_cla).
 
@@ -41,13 +41,13 @@ The GitHub issue tracker is the preferred channel for library feature requests, 
 
 Note: DO NOT include your credentials in ANY code examples, descriptions, or media you make public.
 
-A software bug is a demonstrable issue in the code base. In order for us to diagnose the issue and respond as quickly as possible, please add as much detail as possible into your bug report.
+A software bug is a demonstrable issue in the code base. For us to diagnose the issue and respond as quickly as possible, please add as much detail as possible into your bug report.
 
 Before you decide to create a new issue, please try the following:
 
-1. Check the Github issues tab if the identified issue has already been reported, if so, please add a +1 to the existing post.
-2. Update to the latest version of this code and check if issue has already been fixed
-3. Copy and fill in the Bug Report Template we have provided below
+1. Check the Github issues tab if the identified issue has already been reported. If so, please add a +1 to the existing post.
+2. Update to the latest version of this code and check if issue has already been fixed.
+3. Copy and fill in the Bug Report Template we have provided below.
 
 ### Please use our Bug Report Template
 

@@ -14,7 +14,7 @@ Learn more about the SMTP API at [SendGrid's documentation](https://sendgrid.com
 <a name="announcements"></a>
 # Announcements
 
-All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-php/blob/master/CHANGELOG.md).
+All the updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-php/blob/master/CHANGELOG.md).
 
 # Table of Contents
 
@@ -65,7 +65,7 @@ Then require the library from package:
 require('path/to/smtpapi-php/smtpapi-php.php');
 ```
 
-Previous versions of the library can be found in the [version index](https://sendgrid-open-source.s3.amazonaws.com/index.html).
+The previous versions of the library can be found in the [version index](https://sendgrid-open-source.s3.amazonaws.com/index.html).
 
 <a name="quick-start"></a>
 # Quick Start
@@ -86,12 +86,12 @@ print $header->jsonString();
 <a name="roadmap"></a>
 ## Roadmap
 
-If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-php/milestones). We would love to hear your feedback.
+If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-php/milestones). Your feedback will be highly appreciated.
 
 <a name="how-to-contribute"></a>
 ## How to Contribute
 
-We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md) guide for details.
+We encourage contributions to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md) guide for details.
 
 Quick links:
 
