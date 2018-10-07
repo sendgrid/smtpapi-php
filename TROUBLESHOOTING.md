@@ -9,7 +9,7 @@ If you can't find a solution below, please open an [issue](https://github.com/se
 
 When debugging or testing, it may be useful to examine the raw request body to compare against the [documented format](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html).
 
-In the `examples/example.php` file, after you've added all custom header data, you can do two things:
+In the `examples/example.php` file, after you've added all custom header data, you can do the following two things:
 
 - Run `var_dump($header);` - Dump out the `Smtpapi\Header` object
 - Run `print $header->jsonString();` to print out a stringified json formatted X-SMTPAPI header

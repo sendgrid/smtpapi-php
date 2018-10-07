@@ -83,7 +83,7 @@ $header->setCategories([
 
 The `Header::setCategory()` method can be used to set a single specific category.
 
-It is useful for removing previously set categories. And will create a new array with the string you provide.
+It is useful for removing previously set categories and will create a new array with the string you provide.
 
 This method will remove any categories that have been previously set.
 
@@ -94,7 +94,7 @@ $header->setCategory('marketing'); // Reset the categories to be 'marketing' onl
 <a name="substitution"></a>
 ## Substitution
 
-Substitutions are a great way of writing short dynamic email content easily, 
+Substitutions are a great way of writing short dynamic email content easily.
 
 #### Adding a single substitution string
 
@@ -124,7 +124,7 @@ Sections are similar to substitutions but are specific to the actual message rat
 
 This is useful when you are sending multiple emails with the same style, but different content.
 
-Note that substitution variables can also be included within a section, but section variables cannot.
+Note: Substitution variables can also be included within a section, but section variables cannot.
 
 #### Adding a section
 
@@ -138,7 +138,7 @@ $header->addSection('-event_details-', 'The event will be held tomorrow.'); // R
 
 The `Header::setSections()` allows you to set multiple sections in a single array.
 
-This is good when sending out multiple emails where no dynamic variation is required.
+This is useful when sending out multiple emails where no dynamic variation is required.
 
 This will reset any section key-pairs that have previously been set.
 
@@ -194,7 +194,7 @@ $header->setFilters([
 
 Advanced Suppression Management (or Unsubscribe Groups) are a good way of allowing recipients to unsubscribe from a specific set of emails.
 
-You can 
+You can
 
 #### Setting the ASM group ID
 

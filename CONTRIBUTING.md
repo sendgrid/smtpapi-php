@@ -1,4 +1,4 @@
-Hello! Thank you for choosing to help contribute to one of the SendGrid open source libraries. There are many ways you can contribute and help is always welcome.  We simply ask that you follow the following contribution policies.
+Hello! Thank you for choosing to help contribute to one of the Twilio SendGrid open source libraries. There are many ways you can contribute and help is always welcome.  We simply ask that you follow the following contribution policies.
 
 All third party contributors acknowledge that any contributions they provide will be made under the same open source license that the open source project is provided under.
 
@@ -33,13 +33,13 @@ The GitHub issue tracker is the preferred channel for library feature requests, 
 
 Note: DO NOT include your credentials in ANY code examples, descriptions, or media you make public.
 
-A software bug is a demonstrable issue in the code base. In order for us to diagnose the issue and respond as quickly as possible, please add as much detail as possible into your bug report.
+A software bug is a demonstrable issue in the code base. For us to diagnose the issue and respond as quickly as possible, please add as much detail as possible into your bug report.
 
 Before you decide to create a new issue, please try the following:
 
-1. Check the Github issues tab if the identified issue has already been reported, if so, please add a +1 to the existing post.
-2. Update to the latest version of this code and check if the issue has already been fixed
-3. Copy and fill in the Bug Report Template we have provided below
+1. Check the Github issues tab if the identified issue has already been reported. If so, please add a +1 to the existing post.
+2. Update to the latest version of this code and check if the issue has already been fixed.
+3. Copy and fill in the Bug Report Template we have provided below.
 
 ### Please use our Bug Report Template
 
