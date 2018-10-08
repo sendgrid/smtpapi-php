@@ -2,9 +2,9 @@
 <phpunit bootstrap="bootstrap.php">
   <testsuites>
     <testsuite name="General">
-      <file>./smtpapi.php</file>
-      <file>./smtpapi/Header.php</file>
-      <file>./RepoFilesExists.php</file>
+      <file>./Smtpapi.php</file>
+      <file>./Smtpapi/Header.php</file>
+      <!--<file>./RepoFilesExists.php</file>-->
     </testsuite>
   </testsuites>
 </phpunit>
