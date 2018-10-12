@@ -3,7 +3,7 @@ before_script:
 - composer install --dev --no-interaction
 - cd test
 script:
-- "php ../vendor/bin/phpcs -n --exclude=PEAR.Commenting.FileComment,PEAR.Commenting.ClassComment,PEAR.Commenting.FunctionComment ../lib/"
+- "php ../vendor/bin/phpcs -n --exclude=PEAR.Commenting.FileComment,PEAR.Commenting.ClassComment,PEAR.Commenting.FunctionComment ../lib/ ../test/"
 - ../vendor/bin/phpunit --coverage-clover clover.xml
 after_script:
 - cd ..

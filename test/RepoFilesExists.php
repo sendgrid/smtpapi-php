@@ -2,11 +2,11 @@
 
 class RepoFilesExistsTest extends \PHPUnit_Framework_TestCase
 {
-    private $requiredFiles;
+    private $_requiredFiles;
 
     protected function setUp()
     {
-        $this->requiredFiles = [
+        $this->_requiredFiles = [
             ['./Dockerfile', './docker/Dockerfile'],
             ['./docker-compose.yml', './docker/docker-compose.yml'],
             './.codeclimate.yml',
@@ -28,7 +28,7 @@ class RepoFilesExistsTest extends \PHPUnit_Framework_TestCase
 
     public function testFileArePresentInRepo()
     {
-        foreach ($this->requiredFiles as $filePath) {
+        foreach ($this->_requiredFiles as $filePath) {
             if (is_array($filePath)) {
                 $exists = array_filter(
                     $filePath,

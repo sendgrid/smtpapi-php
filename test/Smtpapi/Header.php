@@ -47,7 +47,7 @@ class SmtpapiTest_Header extends \PHPUnit_Framework_TestCase
         $header = new Smtpapi\Header();
 
         $header->setTos(array('setTos@mailinator.com'));
-       $this->assertEquals($this->t['set_tos'], $header->jsonString());
+        $this->assertEquals($this->t['set_tos'], $header->jsonString());
     }
 
     public function testAddSubstitution()
@@ -235,8 +235,8 @@ class SmtpapiTest_Header extends \PHPUnit_Framework_TestCase
     
     public function testLicenseDateRange()
     {
-    	$license_file = file_get_contents("../../LICENSE.txt");
-    	$current_year = date("Y");
-    	$this->assertInternalType("int", strpos($license_file, "Copyright (c) 2013-" . $current_year . " SendGrid, Inc."));
+        $license_file = file_get_contents("../../LICENSE.txt");
+        $current_year = date("Y");
+        $this->assertInternalType("int", strpos($license_file, "Copyright (c) 2013-" . $current_year . " SendGrid, Inc."));
     }
 }

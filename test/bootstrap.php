@@ -1,10 +1,11 @@
 <?php
 
-include(dirname(dirname(__FILE__)) . '/lib/Smtpapi.php');
+require dirname(dirname(__FILE__)) . '/lib/Smtpapi.php';
 Smtpapi::register_autoloader();
-
-function autoload_tests($class) {
-
+// @codingStandardsIgnoreStart
+function autoload_tests($class)
+{
+// @codingStandardsIgnoreEnd
     if (strpos($class, 'SmtpapiTest_') !== 0) {
         return;
     }
@@ -13,7 +14,7 @@ function autoload_tests($class) {
     $file = str_replace('_', '/', $class);
 
     if (file_exists(dirname(__FILE__) . '/' . $file . '.php')) {
-        require_once(dirname(__FILE__) . '/' . $file . '.php');
+        include_once dirname(__FILE__) . '/' . $file . '.php';
     }
 }
 
