@@ -120,7 +120,9 @@ Quick links:
 smtpapi-php is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
 
 smtpapi-php is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-php are trademarks of SendGrid, Inc.
-
+### Article
+check your license link below
 <a name="license"></a>
 # License
 [The MIT License (MIT)](LICENSE.txt)
+
