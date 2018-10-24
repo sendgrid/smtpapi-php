@@ -4,7 +4,7 @@ before_script:
 - cd test
 script:
 - "php ../vendor/bin/phpcs -n --exclude=PEAR.Commenting.FileComment,PEAR.Commenting.ClassComment,PEAR.Commenting.FunctionComment ../lib/ ../test/"
-- ../vendor/bin/phpunit --coverage-clover clover.xml
+- ../vendor/bin/phpunit
 after_script:
 - cd ..
 - ./scripts/s3upload.sh
