@@ -25,8 +25,8 @@ function parseLatestComponents()
     if (isset($info['version']) && isset($info['body'])) {
         return [
             'tag_name' => $info['version'],
-            'name'    => $info['version'],
-            'body'   => $info['body'],
+            'name'     => $info['version'],
+            'body'     => $info['body'],
         ];
     }
 
