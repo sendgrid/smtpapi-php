@@ -7,6 +7,7 @@ const RELEASES_URI = 'https://api.github.com/repos/sendgrid/smtpapi-php/releases
 $githubToken = getenv('GITHUB_TOKEN');
 
 /**
+ * Parse the CHANGELOG to retrieve the latest details.
  * @return array
  * @throws Exception
  */
@@ -14,6 +15,7 @@ function parseLatestComponents()
 {
     $changelog = file_get_contents(__DIR__.'/../CHANGELOG.md');
 
+    // Parse the latest CHANGELOG contents to 'version', 'date', and 'notes'
     preg_match(
         '/## \[(?<version>v[\d.]+?)\] - \((?<date>\d{4}-\d{2}-\d{2})\) ##\s(?<notes>[\s\S]+?)\s+## \[/m',
         $changelog,
