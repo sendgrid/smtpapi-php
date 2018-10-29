@@ -15,18 +15,18 @@ function parseLatestComponents()
 {
     $changelog = file_get_contents(__DIR__.'/../CHANGELOG.md');
 
-    // Parse the latest CHANGELOG contents to 'version', 'date', and 'notes'
+    // Parse the latest CHANGELOG contents to 'tag_name', 'name', and 'body'
     preg_match(
-        '/## \[(?<version>v[\d.]+?)\] - \((?<date>\d{4}-\d{2}-\d{2})\) ##\s(?<notes>[\s\S]+?)\s+## \[/m',
+        '/## \[(?<version>v[\d.]+?)\] - \((\d{4}-\d{2}-\d{2})\) ##\s(?<body>[\s\S]+?)\s+## \[/m',
         $changelog,
         $info
     );
 
-    if (isset($info['version']) && isset($info['date']) && isset($info['notes'])) {
+    if (isset($info['version']) && isset($info['body'])) {
         return [
-            'version' => $info['version'],
-            'date'    => $info['date'],
-            'notes'   => $info['notes'],
+            'tag_name' => $info['version'],
+            'name'    => $info['version'],
+            'body'   => $info['body'],
         ];
     }
 
@@ -76,20 +76,13 @@ try {
     }
 
     echo 'Parsing the CHANGELOG components.'.PHP_EOL;
-    $components = parseLatestComponents();
+    $data = parseLatestComponents();
 
-    echo 'Adding the release notes'.PHP_EOL;
-
-    $data = [
-        'tag_name' => $components['version'],
-        'name'     => $components['version'],
-        'body'     => $components['notes'],
-    ];
-
+    echo 'Encoding the release notes'.PHP_EOL;
     $encoded = json_encode($data);
     echo PHP_EOL;
 
-    echo 'Sending content to the API:'.PHP_EOL;
+    echo 'Sending content to the GitHub API:'.PHP_EOL;
     echo '> '.$encoded.PHP_EOL;
     sendReleaseNotes($encoded, $githubToken);
 
