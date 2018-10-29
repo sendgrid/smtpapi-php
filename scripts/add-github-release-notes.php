@@ -80,7 +80,6 @@ try {
 
     echo 'Encoding the release notes'.PHP_EOL;
     $encoded = json_encode($data);
-    echo PHP_EOL;
 
     echo 'Sending content to the GitHub API:'.PHP_EOL;
     echo '> '.$encoded.PHP_EOL;
