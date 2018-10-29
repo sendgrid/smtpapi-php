@@ -34,8 +34,9 @@ function parseLatestComponents()
 }
 
 /**
- * @param $data
- * @param $githubToken
+ * Send the release creation request to the GitHub API.
+ * @param $data The JSON-encoded array object
+ * @param $githubToken The GitHub API token
  * @return bool
  * @throws Exception
  */
