@@ -93,7 +93,7 @@ try {
     echo '> '.$encoded.PHP_EOL;
     sendReleaseNotes($encoded, $githubToken);
 
-    echo 'Successfully added release notes for release: '.$data['version'];
+    echo 'Successfully added release notes for release: '.$data['tag_name'];
     echo PHP_EOL;
 } catch (Exception $e) {
     exit('ERROR: '.$e->getMessage());
