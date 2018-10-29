@@ -30,7 +30,7 @@ function parseLatestComponents()
         ];
     }
 
-    throw new Exception('Unable to parse the version!');
+    throw new Exception('Unable to parse the CHANGELOG for the latest version!');
 }
 
 /**
