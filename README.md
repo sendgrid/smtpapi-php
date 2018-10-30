@@ -17,6 +17,8 @@ Learn more about the SMTP API at [SendGrid's documentation](https://sendgrid.com
 
 All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-php/blob/master/CHANGELOG.md).
 
+If you're a software engineer who is passionate about #DeveloperExperience and/or #OpenSource, this is an incredible opportunity to join our #DX team as a Developer Experience Engineer and work with @thinkingserious and @aroach! Tell your friends :)
+
 # Table of Contents
 
 * [Installation](#installation)
