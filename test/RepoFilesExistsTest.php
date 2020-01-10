@@ -1,14 +1,14 @@
 <?php
 
-class RepoFilesExistsTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class RepoFilesExistsTest extends TestCase
 {
     private $requiredFiles;
 
     protected function setUp()
     {
         $this->requiredFiles = [
-            ['./Dockerfile', './docker/Dockerfile'],
-            ['./docker-compose.yml', './docker/docker-compose.yml'],
             './.codeclimate.yml',
             './.env_sample',
             './.github/ISSUE_TEMPLATE',
@@ -22,7 +22,6 @@ class RepoFilesExistsTest extends \PHPUnit_Framework_TestCase
             './README.md',
             './TROUBLESHOOTING.md',
             './USAGE.md',
-            './USE_CASES.md',
         ];
     }
 
