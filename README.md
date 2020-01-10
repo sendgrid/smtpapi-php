@@ -45,7 +45,7 @@ Add the following to your `composer.json` file.
 ```json
 {
     "require": {
-        "sendgrid/smtpapi": "~0.6@dev"
+        "sendgrid/smtpapi": "^0.6.1"
     }
 }
 ```
@@ -56,9 +56,11 @@ Then at the top of your script require the autoloader:
 require 'vendor/autoload.php';
 ```
 
-## Alternative: Install from zip
+#### Alternative: Install package from zip
 
-If you are not using Composer, simply download and install the **[latest packaged release of the library as a zip](https://sendgrid-open-source.s3.amazonaws.com/smtpapi-php/smtpapi-php.zip)**.
+If you are not using Composer, simply download and install the **[latest packaged release of the library as a zip](https://github.com/sendgrid/smtpapi-php/releases/download/0.6.1/smtpapi-php.zip)**.
+
+[**⬇︎ Download Packaged Library ⬇︎**](https://github.com/sendgrid/smtpapi-php/releases/download/0.6.1/smtpapi-php.zip)
 
 Then require the library from package:
 
@@ -66,7 +68,7 @@ Then require the library from package:
 require('path/to/smtpapi-php/smtpapi-php.php');
 ```
 
-Previous versions of the library can be found in the [version index](https://sendgrid-open-source.s3.amazonaws.com/index.html).
+Previous versions of the library can be downloaded directly from [GitHub](https://github.com/sendgrid/smtpapi-php/releases).
 
 ## Setup Environment Variables
 
@@ -112,6 +114,7 @@ Quick links:
 - [Bug Reports](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md#submit_a_bug_report)
 - [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md#cla)
 - [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md#improvements_to_the_codebase)
+- [Review Pull Requests](https://github.com/sendgrid/smtpapi-php/blob/master/CONTRIBUTING.md#code-reviews)
 
 <a name="about"></a>
 # About

@@ -1,0 +1,46 @@
+<?php
+
+use PHPUnit\Framework\TestCase;
+
+class RepoFilesExistsTest extends TestCase
+{
+    private $requiredFiles;
+
+    protected function setUp()
+    {
+        $this->requiredFiles = [
+            './.codeclimate.yml',
+            './.env_sample',
+            './.github/ISSUE_TEMPLATE',
+            './.github/PULL_REQUEST_TEMPLATE',
+            './.gitignore',
+            './.travis.yml',
+            './CHANGELOG.md',
+            './CODE_OF_CONDUCT.md',
+            './CONTRIBUTING.md',
+            ['./LICENSE.md', './LICENSE.txt'],
+            './README.md',
+            './TROUBLESHOOTING.md',
+            './USAGE.md',
+        ];
+    }
+
+    public function testFileArePresentInRepo()
+    {
+        foreach ($this->requiredFiles as $filePath) {
+            if (is_array($filePath)) {
+                $exists = array_filter(
+                    $filePath,
+                    function ($file) {
+                        return file_exists($file);
+                    }
+                );
+                $files = join('" and "', $filePath);
+                $this->assertNotEmpty($exists, "File \"{$files}\" does not exist in repo!");
+            } else {
+                $this->assertFileExists($filePath, "File \"{$filePath}\" does not exist in repo!");
+            }
+        }
+    }
+}
+
