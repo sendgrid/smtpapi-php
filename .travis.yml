@@ -3,19 +3,9 @@ language: php
 script:
     - make test
 
-after_script:
-    - ./scripts/s3upload.sh
-
 php:
     - 5.6
     - 7.0
     - 7.1
     - 7.2
     - 7.3
-
-env:
-    global:
-        - S3_POLICY: ewogICJleHBpcmF0aW9uIjogIjIxMDAtMDEtMDFUMTI6MDA6MDAuMDAwWiIsCiAgImNvbmRpdGlvbnMiOiBbCiAgICB7ImFjbCI6ICJwdWJsaWMtcmVhZCIgfSwKICAgIHsiYnVja2V0IjogInNlbmRncmlkLW9wZW4tc291cmNlIiB9LAogICAgWyJzdGFydHMtd2l0aCIsICIka2V5IiwgInNtdHBhcGktcGhwLyJdLAogICAgWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsIDIwNDgsIDI2ODQzNTQ1Nl0sCiAgICBbImVxIiwgIiRDb250ZW50LVR5cGUiLCAiYXBwbGljYXRpb24vemlwIl0KICBdCn0K
-        - secure: i2K/HSVgkbrrWDeEVLlzZR8sZ7gs29x/t8v2mXYkBIuwsxwJUB3Rjwc6idrpDabHfKFKZfgWAMM1gElssTX2I+qRD32R7gqi2XAe+Qw4Un3/wslFy3QQK0JTIktIkemM/ku8NfEt8kA9tWz9jELFq2bdF3st+YpndapsYHwGiA0=
-        - secure: p4+RTPwJDTT8zHogDgNtKpuNU+Vvky4DKdpAzkEkMwvU9UkI865iHY830pB6YKfTTzn23eFjOPSuBvwMHtygAx7I5MHs4Zj8j+KQNZov2kbEg86ZaihmGUMJcuOKdE6SeiwmECJ+mYwzFQkifAl6AlCBWg1xAMaN4GC7cfmtKOY=
-        - secure: gQ0ffb82Jvx57mSiMgA52yiOrQcKGukEWw4qH7nNveWkGxcBe9o+5+/v8kInMxcOWNNFKlxd7iDuwa3VEAsUp26X28edGD45ce84Rw6yqkiquw7HU94b7Y926IO3pw5zVHUlabLhTIdGkox9+sj1/uaOseXfeWE5Ekz4JteNJcM=

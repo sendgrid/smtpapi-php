@@ -56,9 +56,11 @@ Then at the top of your script require the autoloader:
 require 'vendor/autoload.php';
 ```
 
-## Alternative: Install from zip
+#### Alternative: Install package from zip
 
-If you are not using Composer, simply download and install the **[latest packaged release of the library as a zip](https://sendgrid-open-source.s3.amazonaws.com/smtpapi-php/smtpapi-php.zip)**.
+If you are not using Composer, simply download and install the **[latest packaged release of the library as a zip](https://github.com/sendgrid/smtpapi-php/releases/download/0.6.1/smtpapi-php.zip)**.
+
+[**⬇︎ Download Packaged Library ⬇︎**](https://github.com/sendgrid/smtpapi-php/releases/download/0.6.1/smtpapi-php.zip)
 
 Then require the library from package:
 
@@ -66,7 +68,7 @@ Then require the library from package:
 require('path/to/smtpapi-php/smtpapi-php.php');
 ```
 
-Previous versions of the library can be found in the [version index](https://sendgrid-open-source.s3.amazonaws.com/index.html).
+Previous versions of the library can be downloaded directly from [GitHub](https://github.com/sendgrid/smtpapi-php/releases).
 
 ## Setup Environment Variables
 

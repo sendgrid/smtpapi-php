@@ -4,4 +4,4 @@ vendor
 test/coverage/*
 dist/
 .env*
-smtpapi-php.php
+smtpapi-php.zip
