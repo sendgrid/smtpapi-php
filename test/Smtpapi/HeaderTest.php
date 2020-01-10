@@ -44,6 +44,14 @@ class SmtpapiTest_Header extends TestCase
         $this->assertEquals($this->t['add_to_name'], $header->jsonString());
     }
 
+	public function testAddToNameWithComma()
+	{
+		$header = new Smtpapi\Header();
+		$header->addTo('foo@example.com', 'Mike, John and Jane Bar');
+		$this->assertEquals($this->t['add_to_name_with_comma'],
+							$header->jsonString());
+	}
+
     public function testSetTos()
     {
         $header = new Smtpapi\Header();
