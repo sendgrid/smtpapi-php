@@ -11,8 +11,8 @@ class RepoFilesExistsTest extends TestCase
         $this->requiredFiles = [
             './.codeclimate.yml',
             './.env_sample',
-            './.github/ISSUE_TEMPLATE',
-            './.github/PULL_REQUEST_TEMPLATE',
+            './ISSUE_TEMPLATE.md',
+            './PULL_REQUEST_TEMPLATE.md',
             './.gitignore',
             './.travis.yml',
             './CHANGELOG.md',
