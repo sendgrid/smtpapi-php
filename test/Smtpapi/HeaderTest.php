@@ -247,6 +247,6 @@ class SmtpapiTest_Header extends TestCase
     {
     	$license_file = file_get_contents("LICENSE.md");
     	$current_year = date("Y");
-    	$this->assertInternalType("int", strpos($license_file, "Copyright (c) " . $current_year . " Twilio SendGrid, Inc."));
+    	$this->assertInternalType("int", strpos($license_file, "Copyright (C) " . $current_year . ", Twilio SendGrid, Inc."));
     }
 }
