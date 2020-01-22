@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2020-01-22] Version 0.6.3
+--------------------------
+**Library - Docs**
+- [PR #111](https://github.com/sendgrid/smtpapi-php/pull/111): baseline all the templated markdown docs. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+
+
 [2020-01-10] Version 0.6.2
 --------------------------
 **Library - Fix**
