@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2020-02-19] Version 0.6.4
+--------------------------
+**Library - Chore**
+- [PR #112](https://github.com/sendgrid/smtpapi-php/pull/112): add Twilio branding. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+
+
 [2020-01-22] Version 0.6.3
 --------------------------
 **Library - Docs**
