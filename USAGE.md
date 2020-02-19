@@ -258,7 +258,7 @@ $header->addBatchId('HkJ5yLYULb7Rj8GKSx7u025ouWVlMgAi'); // Adds a previously ge
 <a name="ip-pools"></a>
 ## IP Pools
 
-IP Pools allow you to group SendGrid IP addresses together. For example, if you have a set of marketing IPs, you can assign them a pool ID of `marketing`.
+IP Pools allow you to group Twilio SendGrid IP addresses together. For example, if you have a set of marketing IPs, you can assign them a pool ID of `marketing`.
 
 The IP Pool name can be set using the `Header::setIpPool()` method. You must have generated the IP Pool first through the API.
 
