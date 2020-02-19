@@ -3,7 +3,7 @@
     "description": "Build SendGrid X-SMTPAPI headers in PHP.",
     "homepage": "http://github.com/sendgrid/smtpapi-php",
     "license": "MIT",
-    "keywords": ["SendGrid", "sendgrid", "email", "send", "grid", "smtpapi", "smtp", "api", "xsmtp", "X-SMTP"],
+    "keywords": ["SendGrid", "sendgrid", "email", "send", "grid", "smtpapi", "smtp", "api", "xsmtp", "X-SMTP", "twilio"],
     "require": {
         "php": ">=5.6"
     },
