@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2020-03-04] Version 0.6.5
+--------------------------
+**Library - Chore**
+- [PR #113](https://github.com/sendgrid/smtpapi-php/pull/113): add PHP 7.4 to Travis and test with lowest dependencies. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+
+
 [2020-02-19] Version 0.6.4
 --------------------------
 **Library - Chore**
