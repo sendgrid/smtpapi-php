@@ -22,3 +22,11 @@ php:
 env:
   - dependencies=lowest
   - dependencies=highest
+
+notifications:
+  slack:
+    if: branch = master
+    on_success: never
+    on_failure: change
+    rooms:
+      - secure: iuQayIxgjXO0Mitf0A9QOFF9tKg52WdKRYAvnyaMCMTwz8ofbdzVVli6m4rYYfq+2RV8pIzXDxII5B0heePbWwpPZV/vutY+Au7zzhVetphcsBn07M0+M9LwDHDGQ9A/JDkefyrx4AZhljkmXHpP08m1JdZsoKC3JBheQYQHNGw=
