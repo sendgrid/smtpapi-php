@@ -119,9 +119,11 @@ Quick links:
 <a name="about"></a>
 # About
 
-smtpapi-php is guided and supported by the Twilio [Developer Experience Team](mailto:dx@sendgrid.com).
-
 smtpapi-php is maintained and funded by Twilio SendGrid, Inc. The names and logos for smtpapi-php are trademarks of Twilio SendGrid, Inc.
+
+If you need help installing or using the library, please check the [Twilio SendGrid Support Help Center](https://support.sendgrid.com).
+
+If you've instead found a bug in the library or would like new features added, go ahead and open issues or pull requests against this repo!
 
 <a name="license"></a>
 # License
