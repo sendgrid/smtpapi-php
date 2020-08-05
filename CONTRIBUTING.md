@@ -56,7 +56,7 @@ We welcome direct contributions to the smtpapi-php code base. Thank you!
 
 ##### Prerequisites #####
 
-Please see [composer.json](https://github.com/sendgrid/smtpapi-php/blob/master/composer.json).
+Please see [composer.json](https://github.com/sendgrid/smtpapi-php/blob/HEAD/composer.json).
 
 ##### Initial setup: #####
 
@@ -81,7 +81,7 @@ source ./sendgrid.env
 
 ##### Execute: #####
 
-See the [examples folder](https://github.com/sendgrid/smtpapi-php/tree/master/examples) to get started quickly.
+See the [examples folder](https://github.com/sendgrid/smtpapi-php/tree/HEAD/examples) to get started quickly.
 
 <a name="understanding-the-codebase"></a>
 ## Understanding the Code Base
@@ -103,9 +103,9 @@ Source code.
 
 All PRs require passing tests before the PR will be reviewed.
 
-All test files are in the [`test`](https://github.com/sendgrid/smtpapi-php/tree/master/test) directory.
+All test files are in the [`test`](https://github.com/sendgrid/smtpapi-php/tree/HEAD/test) directory.
 
-For the purposes of contributing to this repo, please update the [`Header.php`](https://github.com/sendgrid/smtpapi-php/blob/master/test/Smtpapi/Header.php) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`Header.php`](https://github.com/sendgrid/smtpapi-php/blob/HEAD/test/Smtpapi/Header.php) file with unit tests as you modify the code.
 
 ```bash
 cd test
@@ -169,7 +169,7 @@ If you can, please look at open PRs and review them. Give feedback and help us m
 5. Locally merge (or rebase) the upstream development branch into your topic branch:
 
    ```bash
-   git pull [--rebase] upstream master
+   git pull [--rebase] upstream main
    ```
 
 6. Push your topic branch up to your fork:
@@ -179,7 +179,7 @@ If you can, please look at open PRs and review them. Give feedback and help us m
    ```
 
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-    with a clear title and description against the `master` branch. All tests must be passing before we will review the PR.
+    with a clear title and description against the `main` branch. All tests must be passing before we will review the PR.
 
 <a name="code-reviews"></a>
 ## Code Reviews
