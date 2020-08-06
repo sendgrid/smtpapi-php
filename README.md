@@ -1,4 +1,4 @@
-![Twilio SendGrid Logo](https://github.com/sendgrid/sendgrid-python/raw/HEAD/twilio_sendgrid_logo.png)
+![Twilio SendGrid Logo](twilio_sendgrid_logo.png)
 
 [![BuildStatus](https://api.travis-ci.org/sendgrid/smtpapi-php.png?branch=main)](https://travis-ci.org/sendgrid/smtpapi-php)
 [![Latest Stable Version](https://poser.pugx.org/sendgrid/smtpapi/version.png)](https://packagist.org/packages/sendgrid/smtpapi)
@@ -16,7 +16,7 @@ Learn more about the SMTP API at [Twilio SendGrid's documentation](https://sendg
 # Announcements
 **The default branch name for this repository has been changed to `main` as of 07/27/2020.**
 
-All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-php/blob/HEAD/CHANGELOG.md).
+All updates to this module is documented in our [CHANGELOG](CHANGELOG.md).
 
 # Table of Contents
 
@@ -97,7 +97,7 @@ print $header->jsonString();
 # Usage
 
 - [Twilio SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
-- [Example Code](https://github.com/sendgrid/smtpapi-php/tree/HEAD/examples)
+- [Example Code](examples)
 
 <a name="roadmap"></a>
 ## Roadmap
@@ -107,14 +107,14 @@ If you are interested in the future direction of this project, please take a loo
 <a name="how-to-contribute"></a>
 ## How to Contribute
 
-We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-php/blob/HEAD/CONTRIBUTING.md) guide for details.
+We encourage contribution to our projects, please see our [CONTRIBUTING](CONTRIBUTING.md) guide for details.
 
 Quick links:
 
-- [Feature Request](https://github.com/sendgrid/smtpapi-php/blob/HEAD/CONTRIBUTING.md#feature_request)
-- [Bug Reports](https://github.com/sendgrid/smtpapi-php/blob/HEAD/CONTRIBUTING.md#submit_a_bug_report)
-- [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-php/blob/HEAD/CONTRIBUTING.md#improvements_to_the_codebase)
-- [Review Pull Requests](https://github.com/sendgrid/smtpapi-php/blob/HEAD/CONTRIBUTING.md#code-reviews)
+- [Feature Request](CONTRIBUTING.md#feature_request)
+- [Bug Reports](CONTRIBUTING.md#submit_a_bug_report)
+- [Improvements to the Codebase](CONTRIBUTING.md#improvements_to_the_codebase)
+- [Review Pull Requests](CONTRIBUTING.md#code-reviews)
 
 <a name="about"></a>
 # About

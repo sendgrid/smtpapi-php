@@ -56,7 +56,7 @@ We welcome direct contributions to the smtpapi-php code base. Thank you!
 
 ##### Prerequisites #####
 
-Please see [composer.json](https://github.com/sendgrid/smtpapi-php/blob/HEAD/composer.json).
+Please see [composer.json](composer.json).
 
 ##### Initial setup: #####
 
@@ -81,7 +81,7 @@ source ./sendgrid.env
 
 ##### Execute: #####
 
-See the [examples folder](https://github.com/sendgrid/smtpapi-php/tree/HEAD/examples) to get started quickly.
+See the [examples folder](examples) to get started quickly.
 
 <a name="understanding-the-codebase"></a>
 ## Understanding the Code Base
@@ -103,9 +103,9 @@ Source code.
 
 All PRs require passing tests before the PR will be reviewed.
 
-All test files are in the [`test`](https://github.com/sendgrid/smtpapi-php/tree/HEAD/test) directory.
+All test files are in the [`test`](test) directory.
 
-For the purposes of contributing to this repo, please update the [`Header.php`](https://github.com/sendgrid/smtpapi-php/blob/HEAD/test/Smtpapi/Header.php) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`Header.php`](test/Smtpapi/Header.php) file with unit tests as you modify the code.
 
 ```bash
 cd test
