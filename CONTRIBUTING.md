@@ -105,7 +105,7 @@ All PRs require passing tests before the PR will be reviewed.
 
 All test files are in the [`test`](test) directory.
 
-For the purposes of contributing to this repo, please update the [`Header.php`](test/Smtpapi/Header.php) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`Header.php`](test/Smtpapi/HeaderTest.php) file with unit tests as you modify the code.
 
 ```bash
 cd test
