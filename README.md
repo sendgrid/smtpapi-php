@@ -16,7 +16,7 @@ Learn more about the SMTP API at [Twilio SendGrid's documentation](https://sendg
 # Announcements
 **The default branch name for this repository has been changed to `main` as of 07/27/2020.**
 
-All updates to this module are documented in our [CHANGELOG](CHANGELOG.md).
+All the updates to this module are documented in our [CHANGELOG](CHANGELOG.md).
 
 # Table of Contents
 
@@ -69,7 +69,7 @@ Then require the library from package:
 require('path/to/smtpapi-php/smtpapi-php.php');
 ```
 
-Previous versions of the library can be downloaded directly from [GitHub](https://github.com/sendgrid/smtpapi-php/releases).
+The previous versions of the library can be downloaded directly from [GitHub](https://github.com/sendgrid/smtpapi-php/releases).
 
 ## Setup Environment Variables
 
@@ -102,12 +102,12 @@ print $header->jsonString();
 <a name="roadmap"></a>
 ## Roadmap
 
-If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-php/milestones). We would love to hear your feedback.
+If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-php/milestones). Your feedback will be highly appreciated.
 
 <a name="how-to-contribute"></a>
 ## How to Contribute
 
-We encourage contribution to our projects; please see our [CONTRIBUTING](CONTRIBUTING.md) guide for details.
+We encourage contributions to our projects; please see our [CONTRIBUTING](CONTRIBUTING.md) guide for details.
 
 Quick links:
 
