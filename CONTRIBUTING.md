@@ -1,6 +1,7 @@
 Hello! Thank you for choosing to help contribute to one of the SendGrid open source libraries. There are many ways you can contribute and help is always welcome.  We simply ask that you follow the following contribution policies.
 
-- [CLAs and CCLAs](#cla)
+All third party contributors acknowledge that any contributions they provide will be made under the same open source license that the open source project is provided under.
+
 - [Roadmap & Milestones](#roadmap)
 - [Feature Request](#feature-request)
 - [Submit a Bug Report](#submit-a-bug-report)
@@ -8,22 +9,12 @@ Hello! Thank you for choosing to help contribute to one of the SendGrid open sou
 - [Understanding the Code Base](#understanding-the-codebase)
 - [Testing](#testing)
 - [Style Guidelines & Naming Conventions](#style-guidelines-and-naming-conventions)
+- [Code Reviews](#code-reviews)
 - [Creating a Pull Request](#creating-a-pull-request)
 - [Code Reviews](#code-reviews)
 
 <a name="roadmap"></a>
 We use [Milestones](https://github.com/sendgrid/smtpapi-php/milestones) to help define current roadmaps, please feel free to grab an issue from the current milestone. Please indicate that you have begun work on it to avoid collisions. Once a PR is made, community review, comments, suggestions, and additional PRs are welcomed and encouraged.
-
-<a name="cla"></a>
-## CLAs and CCLAs
-
-Before you get started, SendGrid requires that a SendGrid Contributor License Agreement (CLA) be filled out by every contributor to a SendGrid open source project.
-
-Our goal with the CLA is to clarify the rights of our contributors and reduce other risks arising from inappropriate contributions.  The CLA also clarifies the rights SendGrid holds in each contribution and helps to avoid misunderstandings over what rights each contributor is required to grant to SendGrid when making a contribution.  In this way, the CLA encourages broad participation by our open source community and helps us build strong open source projects, free from any individual contributor withholding or revoking rights to any contribution.
-
-SendGrid does not merge a pull request made against a SendGrid open source project until that pull request is associated with a signed CLA. Copies of the CLA are available [here](https://gist.github.com/SendGridDX/98b42c0a5d500058357b80278fde3be8#file-sendgrid_cla).
-
-When you create a Pull Request, after a few seconds, a comment will appear with a link to the CLA. Click the link and fill out the brief form and then click the "I agree" button and you are all set. You will not be asked to re-sign the CLA unless we make a change.
 
 There are a few ways to contribute, which we'll enumerate below:
 
@@ -52,7 +43,7 @@ Before you decide to create a new issue, please try the following:
 
 ### Please use our Bug Report Template
 
-In order to make the process easier, we've included a [sample bug report template](https://github.com/sendgrid/smtpapi-php/.github/ISSUE_TEMPLATE) (borrowed from [Ghost](https://github.com/TryGhost/Ghost/)). The template uses [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/) for formatting.
+In order to make the process easier, we've included a [sample bug report template](ISSUE_TEMPLATE.md).
 
 <a name="improvements-to-the-codebase"></a>
 ## Improvements to the Codebase
@@ -65,7 +56,7 @@ We welcome direct contributions to the smtpapi-php code base. Thank you!
 
 ##### Prerequisites #####
 
-Please see [composer.json](https://github.com/sendgrid/smtpapi-php/blob/master/composer.json).
+Please see [composer.json](composer.json).
 
 ##### Initial setup: #####
 
@@ -75,9 +66,9 @@ cd smtpapi-php
 composer install
 ```
 
-## Environment Variables
+### Environment Variables
 
-First, get your free SendGrid account [here](https://sendgrid.com/free?source=smtpapi-php).
+First, get your free Twilio SendGrid account [here](https://sendgrid.com/free?source=smtpapi-php).
 
 Next, update your environment with your [SENDGRID_API_KEY](https://app.sendgrid.com/settings/api_keys) if you will test with Swift Mailer.
 
@@ -90,7 +81,7 @@ source ./sendgrid.env
 
 ##### Execute: #####
 
-See the [examples folder](https://github.com/sendgrid/smtpapi-php/tree/master/examples) to get started quickly.
+See the [examples folder](examples) to get started quickly.
 
 <a name="understanding-the-codebase"></a>
 ## Understanding the Code Base
@@ -112,9 +103,9 @@ Source code.
 
 All PRs require passing tests before the PR will be reviewed.
 
-All test files are in the [`test`](https://github.com/sendgrid/smtpapi-php/tree/master/test) directory.
+All test files are in the [`test`](test) directory.
 
-For the purposes of contributing to this repo, please update the [`Header.php`](https://github.com/sendgrid/smtpapi-php/blob/master/test/Smtpapi/Header.php) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`Header.php`](test/Smtpapi/HeaderTest.php) file with unit tests as you modify the code.
 
 ```bash
 cd test
@@ -131,6 +122,10 @@ Generally, we follow the style guidelines as suggested by the official language.
 Please run your code through:
 
 - [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+
+<a name="code-reviews"></a>
+## Code Reviews
+If you can, please look at open PRs and review them. Give feedback and help us merge these PRs much faster! If you don't know how, Github has some great [information on how to review a Pull Request.](https://help.github.com/articles/about-pull-request-reviews/)
 
 <a name="creating-a-pull-request"></a>
 ## Creating a Pull Request
@@ -174,7 +169,7 @@ Please run your code through:
 5. Locally merge (or rebase) the upstream development branch into your topic branch:
 
    ```bash
-   git pull [--rebase] upstream master
+   git pull [--rebase] upstream main
    ```
 
 6. Push your topic branch up to your fork:
@@ -184,9 +179,7 @@ Please run your code through:
    ```
 
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-    with a clear title and description against the `master` branch. All tests must be passing before we will review the PR.
-
-If you have any additional questions, please feel free to [email](mailto:dx@sendgrid.com) us or create an issue in this repo.
+    with a clear title and description against the `main` branch. All tests must be passing before we will review the PR.
 
 <a name="code-reviews"></a>
 ## Code Reviews

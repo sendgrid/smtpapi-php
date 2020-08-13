@@ -1,6 +1,8 @@
 <?php
 
-class SmtpapiTest_Header extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class SmtpapiTest_Header extends TestCase
 {
     protected $t;
 
@@ -41,6 +43,14 @@ class SmtpapiTest_Header extends \PHPUnit_Framework_TestCase
         $header->addTo('foo@example.com', 'Mike Bar');
         $this->assertEquals($this->t['add_to_name'], $header->jsonString());
     }
+
+	public function testAddToNameWithComma()
+	{
+		$header = new Smtpapi\Header();
+		$header->addTo('foo@example.com', 'Mike, John and Jane Bar');
+		$this->assertEquals($this->t['add_to_name_with_comma'],
+							$header->jsonString());
+	}
 
     public function testSetTos()
     {
@@ -232,11 +242,11 @@ class SmtpapiTest_Header extends \PHPUnit_Framework_TestCase
         $header->setIpPool('foo');
         $this->assertEquals($this->t['set_ip_pool'], $header->jsonString());
     }
-    
+
     public function testLicenseDateRange()
     {
-    	$license_file = file_get_contents("../../LICENSE.txt");
+    	$license_file = file_get_contents("LICENSE.md");
     	$current_year = date("Y");
-    	$this->assertInternalType("int", strpos($license_file, "Copyright (c) 2013-" . $current_year . " SendGrid, Inc."));
+    	$this->assertInternalType("int", strpos($license_file, "Copyright (C) " . $current_year . ", Twilio SendGrid, Inc."));
     }
 }
