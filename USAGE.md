@@ -40,7 +40,7 @@ $header->setTo('example@example.com', 'An Example User');  // An email address w
 
 The `Header::setTos()` method allows you to set multiple recipients by providing an array of email addresses.
 
-This will set the `$to` array to the array you provide. This will need to either be an array of emails, or if names are provided, they need to be formatted as `{{ name }} <{{ email }}>`.
+This will set the `$to` array to the array you provide. This will need to either be an array of emails or if names are provided, they need to be formatted as `{{ name }} <{{ email }}>`.
 
 ```php
 $header->setTos([
@@ -52,7 +52,7 @@ $header->setTos([
 <a name="categories"></a>
 ## Categories
 
-Categories are a useful way to organise your email analytics by tagging your emails with a specific type or topic.
+Categories are a useful way to organize your email analytics by tagging your emails with a specific type or topic.
 
 There are multiple methods available for setting your categories when sending emails.
 
@@ -120,11 +120,11 @@ $header->setSubstitutions([
 <a name="sections"></a>
 ## Sections
 
-Sections are similar to substitutions, but are specific to the actual message rather than the recipient.
+Sections are similar to substitutions but are specific to the actual message rather than the recipient.
 
 This is useful when you are sending multiple emails with the same style, but different content.
 
-Note that substitution variables can also be included within a section, but section variables cannot
+Note that substitution variables can also be included within a section, but section variables cannot.
 
 #### Adding a section
 
@@ -215,7 +215,7 @@ Scheduling the time of your email campaign can be done using a collection of qui
 
 The `Header::addSendEachAt()` method is a good way to add the time to send at.
 
-This method requires a unix timestamp as the input.
+This method requires a Unix timestamp as the input.
 
 ```php
 $header->addSendEachAt(1508694645);
@@ -225,7 +225,7 @@ $header->addSendEachAt(1508694645);
 
 The `Header::setSendEachAt()` method is useful for setting an array of times that recipients have their emails sent.
 
-This method requires an array of unix timestamps as the input.
+This method requires an array of Unix timestamps as the input.
 
 ```php
 $header->addSendEachAt([
@@ -247,7 +247,7 @@ $header->setSendAt(1508694645);
 <a name="batches"></a>
 ## Batches
 
-Batches are a great way to group a collection of scheduled items for sending. It allows you to cancel scheduled emails, and provides more control over the emails.
+Batches are a great way to group a collection of scheduled items for sending. It allows you to cancel scheduled emails and provides more control over the emails.
 
 The batch ID can be set using the `Header::addBatchId()` method. You must have generated the batch ID first through the API.
 
@@ -258,7 +258,7 @@ $header->addBatchId('HkJ5yLYULb7Rj8GKSx7u025ouWVlMgAi'); // Adds a previously ge
 <a name="ip-pools"></a>
 ## IP Pools
 
-IP Pools allow you to group Twilio SendGrid IP addresses together. For example, if you have a set of marketing IPs, you can assign them a pool ID of `marketing`.
+IP Pools allow you to group Twilio SendGrid IP addresses. For example, if you have a set of marketing IPs, you can assign them a pool ID of `marketing`.
 
 The IP Pool name can be set using the `Header::setIpPool()` method. You must have generated the IP Pool first through the API.
 
