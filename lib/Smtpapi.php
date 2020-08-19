@@ -2,7 +2,7 @@
 
 class Smtpapi
 {
-    const VERSION = '0.6.5';
+    const VERSION = '0.6.6';
 
     public static function register_autoloader()
     {
