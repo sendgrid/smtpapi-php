@@ -24,7 +24,6 @@ All the updates to this module are documented in our [CHANGELOG](CHANGELOG.md).
 * [Quick Start](#quick-start)
 * [Usage](#usage)
 * [Announcements](#announcements)
-* [Roadmap](#roadmap)
 * [How to Contribute](#how-to-contribute)
 * [About](#about)
 * [License](#license)
@@ -98,11 +97,6 @@ print $header->jsonString();
 
 - [Twilio SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
 - [Example Code](examples)
-
-<a name="roadmap"></a>
-## Roadmap
-
-If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-php/milestones). Your feedback will be highly appreciated.
 
 <a name="how-to-contribute"></a>
 ## How to Contribute
