@@ -1,4 +1,4 @@
-.PHONY: clean install ci-install test bundle
+.PHONY: clean install ci-install test bundle lint
 
 clean:
 	@rm -rf vendor composer.lock smtpapi-php.zip
@@ -14,3 +14,6 @@ test: install
 
 bundle: ci-install
 	zip -r smtpapi-php.zip . -x \*.git\* \*composer.json\* \*scripts\* \*test\* \*.travis.yml\*
+
+lint:
+	php ./vendor/bin/phpcs -n --exclude=PEAR.Commenting.FileComment,PEAR.Commenting.ClassComment,PEAR.Commenting.FunctionComment ./lib/ ./test/

@@ -2,11 +2,10 @@ language: php
 
 before_script:
   - if [ -n "$GIT_HUB_TOKEN" ]; then composer config -g github-oauth.github.com "$GIT_HUB_TOKEN"; fi;
-  - composer install
   - if [ "$dependencies" = "lowest" ]; then composer update --prefer-lowest --prefer-stable -n; fi;
 
 script:
-  - "php ../vendor/bin/phpcs -n --exclude=PEAR.Commenting.FileComment,PEAR.Commenting.ClassComment,PEAR.Commenting.FunctionComment ../lib/ ../test/"
+  - make lint
   - make test
 
 after_success:
