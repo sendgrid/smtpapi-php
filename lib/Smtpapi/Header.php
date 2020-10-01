@@ -27,7 +27,7 @@ class Header
      */
     public function addTo($email, $name = null)
     {
-        $this->to[] = $name ? sprintf('%s <%s>', $name, $email) : $email;
+        $this->to[] = $name ? sprintf('"%s" <%s>', $name, $email) : $email;
 
         return $this;
     }

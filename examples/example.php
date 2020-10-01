@@ -5,7 +5,7 @@ require dirname(__DIR__).'/lib/Smtpapi/Header.php';
 
 $header = new Smtpapi\Header();
 
-# [To](http://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
+# [To](https://sendgrid.com/docs/API_Reference/SMTP_API/building_an_smtp_email.html)
 $header->addTo('test1@example.com');
 $header->addTo('test2@example.com');
 #$header->setTos(array('you@youremail.com', 'other@otheremail.com'));
@@ -43,7 +43,7 @@ $filter = array(
 );
 $header->setFilters($filter);
 
-# [ASM Group ID](https://sendgrid.com/docs/User_Guide/advanced_suppression_manager.html)
+# [ASM Group ID](https://sendgrid.com/docs/User_Guide/Suppressions/advanced_suppression_manager.html)
 $header->setASMGroupID(42);
 
 # [IP Pools](https://sendgrid.com/docs/API_Reference/Web_API_v3/IP_Management/ip_pools.html)
@@ -56,7 +56,7 @@ $header->setIpPool('pool_name');
 $header->setSendAt(1409348513); # must be a unix timestamp
 
 # This gives you back the stringified json formatted X-SMTPAPI header. Use this with your [smtp client](https://github.com/andris9/simplesmtp) of choice.
-print $header->jsonString();
+print_r $header->jsonString();
 # If you don't want to unicode escape, you can set options parameter for jsonString() (PHP 5.4 or later).
 #$header->jsonString(JSON_UNESCAPED_UNICODE);
 ?>
