@@ -9,7 +9,7 @@ install: clean
 ci-install: clean
 	composer install --no-dev
 
-test: install
+test: install lint
 	vendor/bin/phpunit test --coverage-clover=coverage.xml
 
 bundle: ci-install
