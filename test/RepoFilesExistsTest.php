@@ -4,11 +4,11 @@ use PHPUnit\Framework\TestCase;
 
 class RepoFilesExistsTest extends TestCase
 {
-    private $requiredFiles;
+    private $_requiredFiles;
 
     protected function setUp()
     {
-        $this->requiredFiles = [
+        $this->_requiredFiles = [
             './.codeclimate.yml',
             './.env_sample',
             './ISSUE_TEMPLATE.md',
@@ -27,7 +27,7 @@ class RepoFilesExistsTest extends TestCase
 
     public function testFileArePresentInRepo()
     {
-        foreach ($this->requiredFiles as $filePath) {
+        foreach ($this->_requiredFiles as $filePath) {
             if (is_array($filePath)) {
                 $exists = array_filter(
                     $filePath,

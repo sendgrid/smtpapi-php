@@ -44,20 +44,22 @@ class SmtpapiTest_Header extends TestCase
         $this->assertEquals($this->t['add_to_name'], $header->jsonString());
     }
 
-	public function testAddToNameWithComma()
-	{
-		$header = new Smtpapi\Header();
-		$header->addTo('foo@example.com', 'Mike, John and Jane Bar');
-		$this->assertEquals($this->t['add_to_name_with_comma'],
-							$header->jsonString());
-	}
+    public function testAddToNameWithComma()
+    {
+        $header = new Smtpapi\Header();
+        $header->addTo('foo@example.com', 'Mike, John and Jane Bar');
+        $this->assertEquals(
+            $this->t['add_to_name_with_comma'],
+            $header->jsonString()
+        );
+    }
 
     public function testSetTos()
     {
         $header = new Smtpapi\Header();
 
         $header->setTos(array('setTos@mailinator.com'));
-       $this->assertEquals($this->t['set_tos'], $header->jsonString());
+        $this->assertEquals($this->t['set_tos'], $header->jsonString());
     }
 
     public function testAddSubstitution()
@@ -150,7 +152,7 @@ class SmtpapiTest_Header extends TestCase
     {
         $header = new Smtpapi\Header();
 
-        $header->setSendEachAt(array(1409348513,1409348514));
+        $header->setSendEachAt(array(1409348513, 1409348514));
         $header->setSendAt(1409348513);
         $this->assertEquals($this->t['set_send_at'], $header->jsonString());
     }
@@ -245,8 +247,8 @@ class SmtpapiTest_Header extends TestCase
 
     public function testLicenseDateRange()
     {
-    	$license_file = file_get_contents("LICENSE.md");
-    	$current_year = date("Y");
-    	$this->assertInternalType("int", strpos($license_file, "Copyright (C) " . $current_year . ", Twilio SendGrid, Inc."));
+        $license_file = file_get_contents("LICENSE.md");
+        $current_year = date("Y");
+        $this->assertInternalType("int", strpos($license_file, "Copyright (C) " . $current_year . ", Twilio SendGrid, Inc."));
     }
 }

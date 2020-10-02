@@ -5,3 +5,4 @@ test/coverage/*
 dist/
 .env*
 smtpapi-php.zip
+.idea

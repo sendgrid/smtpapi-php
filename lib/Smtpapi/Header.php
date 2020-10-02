@@ -18,8 +18,11 @@ class Header
     public $ipPool = null;
 
     /**
+     * Add email that you want to send to
+     * 
      * @param $email
      * @param string|null $name
+     * 
      * @return $this
      */
     public function addTo($email, $name = null)
@@ -30,7 +33,10 @@ class Header
     }
 
     /**
+     * Set tos
+     * 
      * @param array $emails
+     * 
      * @return $this
      */
     public function setTos(array $emails)
@@ -40,7 +46,10 @@ class Header
     }
 
     /**
+     * Set send at
+     * 
      * @param int $send_at
+     * 
      * @return $this
      */
     public function setSendAt($send_at)
@@ -52,7 +61,10 @@ class Header
     }
 
     /**
+     * Set send each at
+     * 
      * @param array $send_each_at
+     * 
      * @return $this
      */
     public function setSendEachAt(array $send_each_at)
@@ -64,7 +76,10 @@ class Header
     }
 
     /**
+     * Add send each at
+     * 
      * @param int $send_at
+     * 
      * @return $this
      */
     public function addSendEachAt($send_at)
@@ -76,7 +91,10 @@ class Header
     }
 
     /**
+     * Add batch id
+     * 
      * @param string $batch_id
+     * 
      * @return $this
      */
     public function addBatchId($batch_id)
@@ -87,8 +105,11 @@ class Header
     }
 
     /**
+     * Add substitution
+     * 
      * @param string $from_value
      * @param array $to_values
+     * 
      * @return $this
      */
     public function addSubstitution($from_value, array $to_values)
@@ -99,7 +120,10 @@ class Header
     }
 
     /**
+     * Set substitutions
+     * 
      * @param array $key_value_pairs
+     * 
      * @return $this
      */
     public function setSubstitutions(array $key_value_pairs)
@@ -110,8 +134,11 @@ class Header
     }
 
     /**
+     * Add unique argument
+     * 
      * @param mixed $key
      * @param mixed $value
+     * 
      * @return $this
      */
     public function addUniqueArg($key, $value)
@@ -122,7 +149,10 @@ class Header
     }
 
     /**
+     * Set unique arguments
+     * 
      * @param array $key_value_pairs
+     * 
      * @return $this
      */
     public function setUniqueArgs(array $key_value_pairs)
@@ -133,7 +163,10 @@ class Header
     }
 
     /**
+     * Add category
+     * 
      * @param string $category
+     * 
      * @return $this
      */
     public function addCategory($category)
@@ -144,7 +177,10 @@ class Header
     }
 
     /**
+     * Set categories
+     * 
      * @param array $categories
+     * 
      * @return $this
      */
     public function setCategories(array $categories)
@@ -155,7 +191,10 @@ class Header
     }
 
     /**
+     * Set category
+     * 
      * @param string $category
+     * 
      * @return $this
      */
     public function setCategory($category)
@@ -165,8 +204,11 @@ class Header
     }
 
     /**
+     * Add section
+     * 
      * @param string $from_value
      * @param string $to_value
+     * 
      * @return $this
      */
     public function addSection($from_value, $to_value)
@@ -177,7 +219,10 @@ class Header
     }
 
     /**
+     * Set sections
+     * 
      * @param array $key_value_pairs
+     * 
      * @return $this
      */
     public function setSections(array $key_value_pairs)
@@ -188,9 +233,12 @@ class Header
     }
 
     /**
+     * Add filter
+     * 
      * @param string $filter_name
      * @param string $parameter_name
      * @param mixed $parameter_value
+     * 
      * @return $this
      */
     public function addFilter($filter_name, $parameter_name, $parameter_value)
@@ -201,7 +249,10 @@ class Header
     }
 
     /**
+     * Set filters
+     * 
      * @param array $filter_setting
+     * 
      * @return $this
      */
     public function setFilters(array $filter_setting)
@@ -212,6 +263,8 @@ class Header
     }
 
     /**
+     * Get filters
+     * 
      * @return array filters
      */
     public function getFilters()
@@ -220,7 +273,10 @@ class Header
     }
 
     /**
+     * Set asm group id
+     * 
      * @param string $group_id
+     * 
      * @return $this
      */
     public function setASMGroupID($group_id)
@@ -231,7 +287,10 @@ class Header
     }
 
     /**
+     * Set ip pool
+     * 
      * @param string $name
+     * 
      * @return $this
      */
     public function setIpPool($name)
@@ -242,9 +301,11 @@ class Header
     }
 
     /**
+     * Get header values in array
+     * 
      * @return array
      */
-    private function toArray()
+    public function toArray()
     {
         $data = array();
 
@@ -286,7 +347,10 @@ class Header
     }
 
     /**
-     * @param null $options
+     * Parse header information to json
+     * 
+     * @param $options
+     * 
      * @return string
      */
     public function jsonString($options = null)
