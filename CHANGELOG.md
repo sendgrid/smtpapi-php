@@ -3,6 +3,12 @@ All the notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2020-10-14] Version 0.6.7
+--------------------------
+**Library - Chore**
+- [PR #90](https://github.com/sendgrid/smtpapi-php/pull/90): add style standards check. Thanks to [@pangaunn](https://github.com/pangaunn)!
+
+
 [2020-08-19] Version 0.6.6
 --------------------------
 **Library - Docs**
