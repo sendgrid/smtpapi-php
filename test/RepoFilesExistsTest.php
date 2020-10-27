@@ -18,7 +18,7 @@ class RepoFilesExistsTest extends TestCase
             './CHANGELOG.md',
             './CODE_OF_CONDUCT.md',
             './CONTRIBUTING.md',
-            ['./LICENSE.md', './LICENSE.txt'],
+            './LICENSE',
             './README.md',
             './TROUBLESHOOTING.md',
             './USAGE.md',
