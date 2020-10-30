@@ -1,6 +1,6 @@
 ![Twilio SendGrid Logo](twilio_sendgrid_logo.png)
 
-[![BuildStatus](https://api.travis-ci.org/sendgrid/smtpapi-php.png?branch=main)](https://travis-ci.org/sendgrid/smtpapi-php)
+[![BuildStatus](https://api.travis-ci.com/sendgrid/smtpapi-php.png?branch=main)](https://travis-ci.com/sendgrid/smtpapi-php)
 [![Latest Stable Version](https://poser.pugx.org/sendgrid/smtpapi/version.png)](https://packagist.org/packages/sendgrid/smtpapi)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sendgrid/smtpapi.svg?style=flat-square)](https://packagist.org/packages/sendgrid/smtpapi )
 [![Email Notifications Badge](https://dx.sendgrid.com/badge/php)](https://dx.sendgrid.com/newsletter/php)
