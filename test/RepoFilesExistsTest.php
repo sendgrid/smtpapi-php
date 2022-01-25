@@ -9,12 +9,11 @@ class RepoFilesExistsTest extends TestCase
     protected function setUp()
     {
         $this->_requiredFiles = [
-            './.codeclimate.yml',
             './.env_sample',
             './ISSUE_TEMPLATE.md',
             './PULL_REQUEST_TEMPLATE.md',
             './.gitignore',
-            './.travis.yml',
+            './.github/workflows/test-and-deploy.yml',
             './CHANGELOG.md',
             './CODE_OF_CONDUCT.md',
             './CONTRIBUTING.md',
