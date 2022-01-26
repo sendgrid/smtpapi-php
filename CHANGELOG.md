@@ -3,6 +3,12 @@ All the notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2022-01-26] Version 0.6.9
+--------------------------
+**Library - Chore**
+- [PR #117](https://github.com/sendgrid/smtpapi-php/pull/117): migrate to Github actions. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
+
+
 [2022-01-12] Version 0.6.8
 --------------------------
 **Library - Chore**
