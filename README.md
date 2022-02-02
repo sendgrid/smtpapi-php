@@ -1,6 +1,6 @@
 ![Twilio SendGrid Logo](twilio_sendgrid_logo.png)
 
-[![Tests](https://github.com/sendgrid/smtpapi-php/actions/workflows/test-and-deploy.yml/badge.svg)](https://github.com/sendgrid/smtpapi-php/actions/workflows/test-and-deploy.yml)
+[![BuildStatus](https://github.com/sendgrid/smtpapi-php/actions/workflows/test-and-deploy.yml/badge.svg)](https://github.com/sendgrid/smtpapi-php/actions/workflows/test-and-deploy.yml)
 [![Latest Stable Version](https://poser.pugx.org/sendgrid/smtpapi/version.png)](https://packagist.org/packages/sendgrid/smtpapi)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sendgrid/smtpapi.svg?style=flat-square)](https://packagist.org/packages/sendgrid/smtpapi )
 [![Twitter Follow](https://img.shields.io/twitter/follow/sendgrid.svg?style=social&label=Follow)](https://twitter.com/sendgrid)
