@@ -13,8 +13,6 @@ Learn more about the SMTP API at [Twilio SendGrid's documentation](https://sendg
 
 <a name="announcements"></a>
 # Announcements
-**The default branch name for this repository has been changed to `main` as of 07/27/2020.**
-
 All the updates to this module are documented in our [CHANGELOG](CHANGELOG.md).
 
 # Table of Contents
