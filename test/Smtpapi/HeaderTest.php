@@ -2,11 +2,11 @@
 
 use PHPUnit\Framework\TestCase;
 
-class SmtpapiTest_Header extends TestCase
+class HeaderTest extends TestCase
 {
     protected $t;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $file = __DIR__ . '/../smtpapi_test_strings.json';
         $json = json_decode(file_get_contents($file), true);
@@ -249,6 +249,6 @@ class SmtpapiTest_Header extends TestCase
     {
         $license_file = file_get_contents("LICENSE");
         $current_year = date("Y");
-        $this->assertInternalType("int", strpos($license_file, "Copyright (C) " . $current_year . ", Twilio SendGrid, Inc."));
+        $this->assertIsInt(strpos($license_file, "Copyright (C) " . $current_year . ", Twilio SendGrid, Inc."));
     }
 }
