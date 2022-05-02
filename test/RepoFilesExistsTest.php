@@ -6,7 +6,7 @@ class RepoFilesExistsTest extends TestCase
 {
     private $_requiredFiles;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->_requiredFiles = [
             './.env_sample',
@@ -42,4 +42,3 @@ class RepoFilesExistsTest extends TestCase
         }
     }
 }
-

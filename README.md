@@ -30,7 +30,7 @@ All the updates to this module are documented in our [CHANGELOG](CHANGELOG.md).
 
 ## Prerequisites
 
-- PHP version 5.6, 7.0, 7.1, 7.2, 7.3, or 7.4
+- PHP version 7.3, 7.4, 8.0, or 8.1
 - The Twilio SendGrid service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-php)
 
 ## Install with Composer
