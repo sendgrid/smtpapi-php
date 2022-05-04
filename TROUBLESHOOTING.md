@@ -1,5 +1,3 @@
-If you can't find a solution below, please open an [issue](https://github.com/sendgrid/smtpapi-php/issues).
-
 ## Table of Contents
 
 * [Viewing the Request Body](#request-body)
