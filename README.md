@@ -42,7 +42,7 @@ Add the following to your `composer.json` file.
 ```json
 {
     "require": {
-        "sendgrid/smtpapi": "^1.0.0"
+        "sendgrid/smtpapi": "^0.7.0"
     }
 }
 ```
@@ -55,9 +55,9 @@ require 'vendor/autoload.php';
 
 #### Alternative: Install package from zip
 
-If you are not using Composer, simply download and install the **[latest packaged release of the library as a zip](https://github.com/sendgrid/smtpapi-php/releases/download/1.0.0/smtpapi-php.zip)**.
+If you are not using Composer, simply download and install the **[latest packaged release of the library as a zip](https://github.com/sendgrid/smtpapi-php/releases/download/0.7.0/smtpapi-php.zip)**.
 
-[**⬇︎ Download Packaged Library ⬇︎**](https://github.com/sendgrid/smtpapi-php/releases/download/1.0.0/smtpapi-php.zip)
+[**⬇︎ Download Packaged Library ⬇︎**](https://github.com/sendgrid/smtpapi-php/releases/download/0.7.0/smtpapi-php.zip)
 
 Then require the library from package:
 
