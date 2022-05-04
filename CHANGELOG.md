@@ -3,6 +3,14 @@ All the notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[2022-05-04] Version 1.0.0
+--------------------------
+**Note:** This release contains breaking changes, check our [upgrade guide](./UPGRADE.md#2022-05-04-06x-to-07x) for detailed migration notes.
+
+**Library - Chore**
+- [PR #120](https://github.com/sendgrid/smtpapi-php/pull/120): drop support for EOL PHP versions and add support for PHP 8. Thanks to [@childish-sambino](https://github.com/childish-sambino)! **(breaking change)**
+
+
 [2022-03-09] Version 0.6.11
 ---------------------------
 **Library - Chore**
