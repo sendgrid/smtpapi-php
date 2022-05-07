@@ -10,7 +10,6 @@ class RepoFilesExistsTest extends TestCase
     {
         $this->_requiredFiles = [
             './.env_sample',
-            './ISSUE_TEMPLATE.md',
             './PULL_REQUEST_TEMPLATE.md',
             './.gitignore',
             './.github/workflows/test-and-deploy.yml',
