@@ -88,7 +88,7 @@ Generally, we follow the style guidelines as suggested by the official language.
 
 Please run your code through:
 
-- [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+- [PHP Code Sniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer)
 
 <a name="code-reviews"></a>
 ## Code Reviews
